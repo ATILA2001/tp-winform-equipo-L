@@ -14,7 +14,7 @@ namespace TP_CatalogoComercio
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }
-        public Imagen Imagen { get; set; }
+        List<Imagen> Imagenes { get; set; }  
         public float Precio { get; set; }
         public Articulo() { }
         public Articulo(int CodigoArticulo, string Nombre, string Descripcion, Marca Marca, Categoria Categoria, Imagen Imagen, float Precio)
@@ -24,8 +24,9 @@ namespace TP_CatalogoComercio
             this.Descripcion = Descripcion;
             this.Marca = Marca;
             this.Categoria = Categoria;
-            this.Imagen = Imagen;
             this.Precio = Precio;
+            this.Imagenes = new List<Imagen>();
+            this.Imagenes.Add(Imagen);
         }
     }
 }

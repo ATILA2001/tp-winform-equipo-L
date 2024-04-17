@@ -16,5 +16,10 @@ namespace TP_CatalogoComercio
         {
             InitializeComponent();
         }
+
+        private void mostrarTodosLosArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

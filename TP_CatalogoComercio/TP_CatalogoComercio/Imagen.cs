@@ -8,14 +8,10 @@ namespace TP_CatalogoComercio
 {
     internal class Imagen
     {
-        public int IDImagen { get; set; }
-        public string Descripcion { get; set; }
         public string Url { get; set; }
         public Imagen() { }
-        public Imagen(int iDImagen, string Descripcion, string Url)
+        public Imagen(string Url)
         {
-            this.IDImagen = iDImagen;
-            this.Descripcion = Descripcion;
             this.Url = Url;
         }
 

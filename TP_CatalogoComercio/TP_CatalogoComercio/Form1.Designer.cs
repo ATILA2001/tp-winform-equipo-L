@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarTodosLosArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaConFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,6 +59,19 @@
             this.busquedaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.busquedaToolStripMenuItem.Text = "Busqueda";
             // 
+            // mostrarTodosLosArticulosToolStripMenuItem
+            // 
+            this.mostrarTodosLosArticulosToolStripMenuItem.Name = "mostrarTodosLosArticulosToolStripMenuItem";
+            this.mostrarTodosLosArticulosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.mostrarTodosLosArticulosToolStripMenuItem.Text = "Mostrar todos los articulos";
+            this.mostrarTodosLosArticulosToolStripMenuItem.Click += new System.EventHandler(this.mostrarTodosLosArticulosToolStripMenuItem_Click);
+            // 
+            // busquedaConFiltrosToolStripMenuItem
+            // 
+            this.busquedaConFiltrosToolStripMenuItem.Name = "busquedaConFiltrosToolStripMenuItem";
+            this.busquedaConFiltrosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.busquedaConFiltrosToolStripMenuItem.Text = "Busqueda con filtros";
+            // 
             // gestionArticulosToolStripMenuItem
             // 
             this.gestionArticulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -68,18 +81,6 @@
             this.gestionArticulosToolStripMenuItem.Name = "gestionArticulosToolStripMenuItem";
             this.gestionArticulosToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
             this.gestionArticulosToolStripMenuItem.Text = "Gestion Articulos";
-            // 
-            // mostrarTodosLosArticulosToolStripMenuItem
-            // 
-            this.mostrarTodosLosArticulosToolStripMenuItem.Name = "mostrarTodosLosArticulosToolStripMenuItem";
-            this.mostrarTodosLosArticulosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.mostrarTodosLosArticulosToolStripMenuItem.Text = "Mostrar todos los articulos";
-            // 
-            // busquedaConFiltrosToolStripMenuItem
-            // 
-            this.busquedaConFiltrosToolStripMenuItem.Name = "busquedaConFiltrosToolStripMenuItem";
-            this.busquedaConFiltrosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.busquedaConFiltrosToolStripMenuItem.Text = "Busqueda con filtros";
             // 
             // agregarToolStripMenuItem
             // 
@@ -105,9 +106,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
             this.Text = "Catalogo Comercio";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

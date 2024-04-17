@@ -8,12 +8,10 @@ namespace TP_CatalogoComercio
 {
     internal class Categoria
     {
-        public int IDCategoria { get; set; }
         public string Descripcion { get; set; }
         public Categoria() { }
-        public Categoria(int IDCategoria, string Descripcion)
+        public Categoria(string Descripcion)
         {
-            this.IDCategoria = IDCategoria;
             this.Descripcion = Descripcion;
         }
 
