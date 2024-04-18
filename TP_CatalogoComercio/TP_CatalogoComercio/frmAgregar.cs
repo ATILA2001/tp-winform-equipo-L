@@ -21,5 +21,11 @@ namespace TP_CatalogoComercio
         {
             Close();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El articulo ha sido cargado exitosamente");
+            Close();
+        }
     }
 }

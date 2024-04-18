@@ -25,19 +25,32 @@ namespace TP_CatalogoComercio
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAgregar frmAgregar = new frmAgregar();
-            frmAgregar.ShowDialog();
+            frmAgregar.MdiParent = this;
+            frmAgregar.Show();
         }
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModificar frmModificar = new frmModificar();
-            frmModificar.ShowDialog();
+            frmSeleccionarModificar frmSeleccionar = new frmSeleccionarModificar();
+            frmSeleccionar.MdiParent = this;
+            frmSeleccionar.Show();
         }
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmEliminar frmEliminar = new frmEliminar();
-            frmEliminar.ShowDialog();
+            frmEliminar.MdiParent= this;
+            frmEliminar.Show();
+        }
+
+        private void gestionArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imagenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

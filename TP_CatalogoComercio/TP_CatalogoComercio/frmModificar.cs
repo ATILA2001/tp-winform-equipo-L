@@ -16,5 +16,31 @@ namespace TP_CatalogoComercio
         {
             InitializeComponent();
         }
+
+        private void cbMarcaArt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCategoriaArt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelarArt_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("El articulo ha sido modificado exitosamente");
+            Close();
+        }
+
+        private void frmModificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

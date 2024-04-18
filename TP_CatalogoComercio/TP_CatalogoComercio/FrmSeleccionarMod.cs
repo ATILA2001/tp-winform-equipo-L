@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace TP_CatalogoComercio
 {
-    public partial class frmEliminar : Form
+    public partial class frmSeleccionarModificar : Form
     {
-        public frmEliminar()
+        public frmSeleccionarModificar()
         {
             InitializeComponent();
         }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("El articulo ha sido eliminado exitosamente");
             Close();
+            frmModificar frmModificar = new frmModificar();
+            frmModificar.ShowDialog();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
