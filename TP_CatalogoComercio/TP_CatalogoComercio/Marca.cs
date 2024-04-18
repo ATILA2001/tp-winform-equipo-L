@@ -8,10 +8,12 @@ namespace TP_CatalogoComercio
 {
     internal class Marca
     {
+        public int Id { get; set; }
         public string Descripcion { get; set; }
         public Marca() { }
-        public Marca(string Descripcion)
+        public Marca(int Id, string Descripcion)
         {
+            this.Id = Id;
             this.Descripcion = Descripcion;
         }
 

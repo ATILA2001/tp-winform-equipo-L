@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TP_CatalogoComercio
 {
-    public partial class frmPrincipal : Form
+    public partial class frmEliminar : Form
     {
-        public frmPrincipal()
+        public frmEliminar()
         {
             InitializeComponent();
-        }
-
-        private void mostrarTodosLosArticulosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
