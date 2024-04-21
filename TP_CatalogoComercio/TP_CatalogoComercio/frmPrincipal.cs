@@ -19,6 +19,9 @@ namespace TP_CatalogoComercio
 
         private void mostrarTodosLosArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmMostrarTodos frmMostrarTodos = new frmMostrarTodos();
+            frmMostrarTodos.MdiParent = this;
+            frmMostrarTodos.Show();
 
         }
 
@@ -51,6 +54,34 @@ namespace TP_CatalogoComercio
         private void imagenesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void cargarImagenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarImagen frmAgregarImagen = new frmAgregarImagen();
+            frmAgregarImagen.MdiParent = this;
+            frmAgregarImagen.Show();
+        }
+
+        private void listadoMarcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoMarcas frmListadoMarcas = new frmListadoMarcas();
+            frmListadoMarcas.MdiParent = this;
+            frmListadoMarcas.Show();
+        }
+
+        private void listadoCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListadoCategoria frmListadoCategoria = new frmListadoCategoria();
+            frmListadoCategoria.MdiParent = this;
+            frmListadoCategoria.Show();
+        }
+
+        private void busquedaConFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltros frmFiltros = new frmFiltros();
+            frmFiltros.MdiParent = this;
+            frmFiltros.Show();
         }
     }
 }

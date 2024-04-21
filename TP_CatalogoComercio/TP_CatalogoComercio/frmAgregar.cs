@@ -27,5 +27,30 @@ namespace TP_CatalogoComercio
             MessageBox.Show("El articulo ha sido cargado exitosamente");
             Close();
         }
+
+        private void lblCodArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblImagenArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImagenArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

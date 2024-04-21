@@ -54,17 +54,47 @@
     <Compile Include="frmAgregar.Designer.cs">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarImagen.Designer.cs">
+      <DependentUpon>frmAgregarImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEliminar.Designer.cs">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFiltros.Designer.cs">
+      <DependentUpon>frmFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoCategoria.Designer.cs">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadoMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadoMarcas.Designer.cs">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmModificar.Designer.cs">
       <DependentUpon>frmModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarTodos.Designer.cs">
+      <DependentUpon>frmMostrarTodos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -85,11 +115,26 @@
     <EmbeddedResource Include="frmAgregar.resx">
       <DependentUpon>frmAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarImagen.resx">
+      <DependentUpon>frmAgregarImagen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEliminar.resx">
       <DependentUpon>frmEliminar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFiltros.resx">
+      <DependentUpon>frmFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoCategoria.resx">
+      <DependentUpon>frmListadoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadoMarcas.resx">
+      <DependentUpon>frmListadoMarcas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModificar.resx">
       <DependentUpon>frmModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarTodos.resx">
+      <DependentUpon>frmMostrarTodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

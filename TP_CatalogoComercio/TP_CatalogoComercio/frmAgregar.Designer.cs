@@ -60,6 +60,7 @@
             this.lblTitulo.Size = new System.Drawing.Size(168, 26);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Agregar Artículo";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // gbArt
             // 
@@ -117,6 +118,7 @@
             this.lblImagenArt.Size = new System.Drawing.Size(45, 13);
             this.lblImagenArt.TabIndex = 29;
             this.lblImagenArt.Text = "Imagen:";
+            this.lblImagenArt.Click += new System.EventHandler(this.lblImagenArt_Click);
             // 
             // lblDescripcionArt
             // 
@@ -145,6 +147,7 @@
             this.txtImagenArt.Name = "txtImagenArt";
             this.txtImagenArt.Size = new System.Drawing.Size(141, 20);
             this.txtImagenArt.TabIndex = 25;
+            this.txtImagenArt.TextChanged += new System.EventHandler(this.txtImagenArt_TextChanged);
             // 
             // txtDescripcionArt
             // 
@@ -169,6 +172,7 @@
             this.txtCodArt.Name = "txtCodArt";
             this.txtCodArt.Size = new System.Drawing.Size(141, 20);
             this.txtCodArt.TabIndex = 22;
+            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
             // 
             // lblCodArt
             // 
@@ -179,6 +183,7 @@
             this.lblCodArt.Size = new System.Drawing.Size(43, 13);
             this.lblCodArt.TabIndex = 21;
             this.lblCodArt.Text = "Código:";
+            this.lblCodArt.Click += new System.EventHandler(this.lblCodArt_Click);
             // 
             // gbOpcionalArt
             // 
