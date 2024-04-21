@@ -15,6 +15,7 @@ namespace TP_CatalogoComercio
         public frmMostrarTodos()
         {
             InitializeComponent();
+            
         }
 
         private void lblTitulo_Click(object sender, EventArgs e)

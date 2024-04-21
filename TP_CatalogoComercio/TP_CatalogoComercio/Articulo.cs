@@ -9,6 +9,12 @@ namespace TP_CatalogoComercio
 {
     internal class Articulo
     {
+        private int codArticulo;
+        private string nombre;
+        private string descripcion;
+        private Imagen imagen;
+        private decimal precio;
+
         public int CodigoArticulo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
@@ -28,5 +34,21 @@ namespace TP_CatalogoComercio
             this.Imagenes = new List<Imagen>();
             this.Imagenes.Add(Imagen);
         }
+
+        public Articulo(int v, string text1, string text2, Marca marca, Categoria categoria, Imagen imagen, decimal value)
+        {
+            this.codArticulo = v;
+            this.nombre = text1;
+            this.descripcion = text2;
+            Marca = marca;
+            Categoria = categoria;
+            this.imagen = imagen;
+            this.precio = value;
+        }
+        public override string ToString()
+        {
+            return "Codigo: " + codArticulo + " Nombre: " + nombre + " Descripcion: " + descripcion + " Marca: " + Marca.ToString() + " Categoria :" + Categoria.ToString() + " Precio: " + precio;
+        }
+
     }
 }

@@ -83,5 +83,10 @@ namespace TP_CatalogoComercio
             frmFiltros.MdiParent = this;
             frmFiltros.Show();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

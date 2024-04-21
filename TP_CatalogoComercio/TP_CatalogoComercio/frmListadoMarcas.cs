@@ -37,5 +37,15 @@ namespace TP_CatalogoComercio
             Close();
 
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Marca marca = new Marca(txtDescripcionArt.Text);
+            //listView1.Items.Add(marca.ToString());
+        }
+
+        private void btEliminar_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

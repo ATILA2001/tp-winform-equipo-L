@@ -26,5 +26,11 @@ namespace TP_CatalogoComercio
         {
             Close();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Categoria categoria = new Categoria(txtDescripcionArt.Text);
+            //listView1.Items.Add(categoria.ToString());
+        }
     }
 }

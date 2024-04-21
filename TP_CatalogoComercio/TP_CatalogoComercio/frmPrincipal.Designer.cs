@@ -126,21 +126,21 @@
             // cargarImagenToolStripMenuItem
             // 
             this.cargarImagenToolStripMenuItem.Name = "cargarImagenToolStripMenuItem";
-            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.cargarImagenToolStripMenuItem.Text = "Cargar imagen";
             this.cargarImagenToolStripMenuItem.Click += new System.EventHandler(this.cargarImagenToolStripMenuItem_Click);
             // 
             // listadoMarcasToolStripMenuItem
             // 
             this.listadoMarcasToolStripMenuItem.Name = "listadoMarcasToolStripMenuItem";
-            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.listadoMarcasToolStripMenuItem.Text = "Listado marcas";
             this.listadoMarcasToolStripMenuItem.Click += new System.EventHandler(this.listadoMarcasToolStripMenuItem_Click);
             // 
             // listadoCategoriasToolStripMenuItem
             // 
             this.listadoCategoriasToolStripMenuItem.Name = "listadoCategoriasToolStripMenuItem";
-            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.listadoCategoriasToolStripMenuItem.Text = "Listado categorias";
             this.listadoCategoriasToolStripMenuItem.Click += new System.EventHandler(this.listadoCategoriasToolStripMenuItem_Click);
             // 
@@ -155,6 +155,7 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Comercio";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

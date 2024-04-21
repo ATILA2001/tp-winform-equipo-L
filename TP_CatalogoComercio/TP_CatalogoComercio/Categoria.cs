@@ -11,11 +11,13 @@ namespace TP_CatalogoComercio
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public Categoria() { }
-        public Categoria(int Id, string Descripcion)
+        public Categoria( string Descripcion)
         {   
-            this.Id = Id;
             this.Descripcion = Descripcion;
         }
-
+        public override string ToString()
+        {
+            return Descripcion;
+        }
     }
 }

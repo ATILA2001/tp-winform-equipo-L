@@ -45,6 +45,7 @@
             this.cbMarcaArt = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelarArt = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.gbArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioArt)).BeginInit();
             this.gbOpcionalArt.SuspendLayout();
@@ -95,9 +96,10 @@
             0,
             0});
             this.nudPrecioArt.Name = "nudPrecioArt";
-            this.nudPrecioArt.Size = new System.Drawing.Size(140, 20);
+            this.nudPrecioArt.Size = new System.Drawing.Size(141, 20);
             this.nudPrecioArt.TabIndex = 15;
             this.nudPrecioArt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPrecioArt.ValueChanged += new System.EventHandler(this.nudPrecioArt_ValueChanged);
             // 
             // lblPrecioArt
             // 
@@ -218,6 +220,7 @@
             this.cbMarcaArt.Size = new System.Drawing.Size(82, 21);
             this.cbMarcaArt.TabIndex = 0;
             this.cbMarcaArt.Text = "Marca";
+            this.cbMarcaArt.SelectedIndexChanged += new System.EventHandler(this.cbMarcaArt_SelectedIndexChanged);
             // 
             // btnAgregar
             // 
@@ -245,6 +248,16 @@
             this.btnCancelarArt.UseVisualStyleBackColor = false;
             this.btnCancelarArt.Click += new System.EventHandler(this.btnCancelarArt_Click);
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(534, 77);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(228, 243);
+            this.listView1.TabIndex = 15;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,6 +265,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnCancelarArt);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbOpcionalArt);
@@ -291,5 +305,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnCancelarArt;
         private System.Windows.Forms.NumericUpDown nudPrecioArt;
+        private System.Windows.Forms.ListView listView1;
     }
 }
