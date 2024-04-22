@@ -18,7 +18,7 @@ namespace TP_CatalogoComercio
 
             try
             {
-                conexion.ConnectionString = "server=.\\SQLEXPRESS01; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=DESKTOP-LUXPABE\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "Select Id, Descripcion from CATEGORIAS";
                 comando.Connection = conexion;

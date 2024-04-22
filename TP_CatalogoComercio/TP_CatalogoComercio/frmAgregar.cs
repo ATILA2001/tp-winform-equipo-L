@@ -24,46 +24,70 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Articulo art = new Articulo();
+            art.Marca = new Marca();
+            art.Categoria = new Categoria();
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            try
+            {
+                if(txtCodArt.Text.Trim().Length > 0 && txtNombreArt.Text.Trim() != string.Empty && txtDescripcionArt.Text.Trim() != string.Empty && nudPrecioArt.Value != 0)
+                {
+                    art.CodigoArticulo = txtCodArt.Text.Trim();
+                    art.Nombre = txtNombreArt.Text.Trim();
+                    art.Descripcion = txtDescripcionArt.Text.Trim();
+                    art.Marca = (Marca)cbMarcaArt.SelectedItem;
+                    art.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
+                    art.Precio = nudPrecioArt.Value;
+
+                    artNegocio.agregar(art);
+                    MessageBox.Show("¡Se agregó el registro!");
+                    limpiarControles();
+                }else
+                {
+                    MessageBox.Show("¡Tiene que llenar los campos!");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        private void lblCodArt_Click(object sender, EventArgs e)
+        private void limpiarControles()
         {
+            MarcaNegocio marca = new MarcaNegocio();
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            try
+            {
+                txtCodArt.Text = string.Empty;
+                txtNombreArt.Text = string.Empty;
+                txtDescripcionArt.Text = string.Empty;
+                cbMarcaArt.DataSource = marca.listar();
+                cbCategoriaArt.DataSource = categoria.listar();
+                nudPrecioArt.Value = 0;
 
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
         }
 
-        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        private void frmAgregar_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblImagenArt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtImagenArt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nudPrecioArt_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbMarcaArt_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            MarcaNegocio marca = new MarcaNegocio();
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            try
+            {
+                cbMarcaArt.DataSource = marca.listar();
+                cbCategoriaArt.DataSource = categoria.listar();
+                
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
         }
     }
 }

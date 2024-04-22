@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,7 +22,7 @@ namespace TP_CatalogoComercio
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }
         List<Imagen> Imagenes { get; set; }  
-        public float Precio { get; set; }
+        public decimal Precio { get; set; }
         public Articulo() { }
         public Articulo(string CodigoArticulo, string Nombre, string Descripcion, Marca Marca, Categoria Categoria, Imagen Imagen, float Precio)
         {
@@ -30,7 +31,7 @@ namespace TP_CatalogoComercio
             this.Descripcion = Descripcion;
             this.Marca = Marca;
             this.Categoria = Categoria;
-            this.Precio = Precio;
+            this.Precio = (decimal)Precio;
             this.Imagenes = new List<Imagen>();
             this.Imagenes.Add(Imagen);
         }
