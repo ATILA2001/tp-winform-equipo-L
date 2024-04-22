@@ -29,51 +29,55 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblDescripcionArt = new System.Windows.Forms.Label();
-            this.txtDescripcionArt = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.bnVolver = new System.Windows.Forms.Button();
+            this.dgvMarca = new System.Windows.Forms.DataGridView();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(298, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(300, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(159, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(194, 26);
             this.lblTitulo.TabIndex = 29;
-            this.lblTitulo.Text = "Listado Marcas";
+            this.lblTitulo.Text = "Gestion de Marcas";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // lblDescripcionArt
+            // lblId
             // 
-            this.lblDescripcionArt.AutoSize = true;
-            this.lblDescripcionArt.Location = new System.Drawing.Point(11, 84);
-            this.lblDescripcionArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescripcionArt.Name = "lblDescripcionArt";
-            this.lblDescripcionArt.Size = new System.Drawing.Size(77, 13);
-            this.lblDescripcionArt.TabIndex = 33;
-            this.lblDescripcionArt.Text = "Agregar Marca";
-            this.lblDescripcionArt.Click += new System.EventHandler(this.lblDescripcionArt_Click);
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(11, 96);
+            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(90, 20);
+            this.lblId.TabIndex = 33;
+            this.lblId.Text = "Ingresar Id:";
+            this.lblId.Click += new System.EventHandler(this.lblDescripcionArt_Click);
             // 
-            // txtDescripcionArt
+            // txtId
             // 
-            this.txtDescripcionArt.Location = new System.Drawing.Point(97, 81);
-            this.txtDescripcionArt.Margin = new System.Windows.Forms.Padding(2);
-            this.txtDescripcionArt.Name = "txtDescripcionArt";
-            this.txtDescripcionArt.Size = new System.Drawing.Size(141, 20);
-            this.txtDescripcionArt.TabIndex = 32;
+            this.txtId.Location = new System.Drawing.Point(174, 96);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(141, 20);
+            this.txtId.TabIndex = 32;
             // 
             // btEliminar
             // 
             this.btEliminar.BackColor = System.Drawing.Color.Red;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btEliminar.Location = new System.Drawing.Point(266, 389);
+            this.btEliminar.Location = new System.Drawing.Point(438, 374);
             this.btEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(66, 23);
@@ -86,7 +90,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(266, 79);
+            this.btnAgregar.Location = new System.Drawing.Point(338, 142);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 23);
@@ -98,28 +102,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 137);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 34;
             this.label1.Text = "Listado actual";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(97, 137);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(141, 275);
-            this.listView1.TabIndex = 35;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // bnVolver
             // 
             this.bnVolver.BackColor = System.Drawing.Color.Red;
             this.bnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bnVolver.Location = new System.Drawing.Point(675, 389);
+            this.bnVolver.Location = new System.Drawing.Point(705, 374);
             this.bnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.bnVolver.Name = "bnVolver";
             this.bnVolver.Size = new System.Drawing.Size(66, 23);
@@ -128,6 +124,35 @@
             this.bnVolver.UseVisualStyleBackColor = false;
             this.bnVolver.Click += new System.EventHandler(this.bnVolver_Click);
             // 
+            // dgvMarca
+            // 
+            this.dgvMarca.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvMarca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarca.Location = new System.Drawing.Point(174, 193);
+            this.dgvMarca.Name = "dgvMarca";
+            this.dgvMarca.Size = new System.Drawing.Size(245, 204);
+            this.dgvMarca.TabIndex = 37;
+            // 
+            // lblDescripcion
+            // 
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(11, 142);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(159, 20);
+            this.lblDescripcion.TabIndex = 38;
+            this.lblDescripcion.Text = "Ingresar Descripcion:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(174, 142);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.TabIndex = 39;
+            // 
             // frmListadoMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,18 +160,22 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.dgvMarca);
             this.Controls.Add(this.bnVolver);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblDescripcionArt);
-            this.Controls.Add(this.txtDescripcionArt);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmListadoMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListadoMarcas";
+            this.Text = "Editar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmListadoMarcas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,12 +184,14 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblDescripcionArt;
-        private System.Windows.Forms.TextBox txtDescripcionArt;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button bnVolver;
+        private System.Windows.Forms.DataGridView dgvMarca;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

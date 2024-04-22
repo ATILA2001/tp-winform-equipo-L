@@ -105,8 +105,9 @@
             this.Controls.Add(this.btnSiguiente);
             this.Name = "frmSeleccionarModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSeleccionar";
+            this.Text = "Gestion de Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmSeleccionarModificar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

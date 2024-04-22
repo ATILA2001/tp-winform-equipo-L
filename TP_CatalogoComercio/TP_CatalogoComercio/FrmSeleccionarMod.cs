@@ -33,5 +33,10 @@ namespace TP_CatalogoComercio
         {
             Close();
         }
+
+        private void frmSeleccionarModificar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

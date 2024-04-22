@@ -11,8 +11,9 @@ namespace TP_CatalogoComercio
         public int Id { get; set; }
         public string Descripcion { get; set; }
         public Categoria() { }
-        public Categoria( string Descripcion)
+        public Categoria(int Id, string Descripcion)
         {   
+            this.Id = Id;
             this.Descripcion = Descripcion;
         }
         public override string ToString()

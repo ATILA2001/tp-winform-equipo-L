@@ -32,5 +32,10 @@ namespace TP_CatalogoComercio
         {
             Close();
         }
+
+        private void frmAgregarImagen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,5 +27,10 @@ namespace TP_CatalogoComercio
         {
             Close();
         }
+
+        private void frmEliminar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

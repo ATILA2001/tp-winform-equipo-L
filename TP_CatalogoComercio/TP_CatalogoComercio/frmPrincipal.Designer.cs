@@ -32,26 +32,22 @@
             this.busquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarTodosLosArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.busquedaConFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionArticulosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imagenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarImagenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.gbBúsqueda = new System.Windows.Forms.GroupBox();
             this.gbGestion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.gbBúsqueda = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
-            this.gbBúsqueda.SuspendLayout();
             this.gbGestion.SuspendLayout();
+            this.gbBúsqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,7 +55,6 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.busquedaToolStripMenuItem,
-            this.gestionArticulosToolStripMenuItem,
             this.imagenesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -90,38 +85,6 @@
             this.busquedaConFiltrosToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.busquedaConFiltrosToolStripMenuItem.Text = "Busqueda con filtros";
             this.busquedaConFiltrosToolStripMenuItem.Click += new System.EventHandler(this.busquedaConFiltrosToolStripMenuItem_Click);
-            // 
-            // gestionArticulosToolStripMenuItem
-            // 
-            this.gestionArticulosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem,
-            this.modificarToolStripMenuItem,
-            this.eliminarToolStripMenuItem});
-            this.gestionArticulosToolStripMenuItem.Name = "gestionArticulosToolStripMenuItem";
-            this.gestionArticulosToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.gestionArticulosToolStripMenuItem.Text = "Gestion Articulos";
-            this.gestionArticulosToolStripMenuItem.Click += new System.EventHandler(this.gestionArticulosToolStripMenuItem_Click);
-            // 
-            // agregarToolStripMenuItem
-            // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar";
-            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
-            // 
-            // modificarToolStripMenuItem
-            // 
-            this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarToolStripMenuItem.Text = "Modificar";
-            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eliminarToolStripMenuItem.Text = "Eliminar";
-            this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // imagenesToolStripMenuItem
             // 
@@ -164,18 +127,7 @@
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(800, 424);
             this.panelMain.TabIndex = 2;
-            // 
-            // gbBúsqueda
-            // 
-            this.gbBúsqueda.Controls.Add(this.button1);
-            this.gbBúsqueda.Controls.Add(this.button5);
-            this.gbBúsqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBúsqueda.Location = new System.Drawing.Point(401, 99);
-            this.gbBúsqueda.Name = "gbBúsqueda";
-            this.gbBúsqueda.Size = new System.Drawing.Size(200, 216);
-            this.gbBúsqueda.TabIndex = 0;
-            this.gbBúsqueda.TabStop = false;
-            this.gbBúsqueda.Text = "Búsqueda";
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // gbGestion
             // 
@@ -189,16 +141,6 @@
             this.gbGestion.TabIndex = 1;
             this.gbGestion.TabStop = false;
             this.gbGestion.Text = "Gestión de artículos";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(48, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
@@ -233,6 +175,28 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // gbBúsqueda
+            // 
+            this.gbBúsqueda.Controls.Add(this.button1);
+            this.gbBúsqueda.Controls.Add(this.button5);
+            this.gbBúsqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBúsqueda.Location = new System.Drawing.Point(401, 99);
+            this.gbBúsqueda.Name = "gbBúsqueda";
+            this.gbBúsqueda.Size = new System.Drawing.Size(200, 216);
+            this.gbBúsqueda.TabIndex = 0;
+            this.gbBúsqueda.TabStop = false;
+            this.gbBúsqueda.Text = "Búsqueda";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(48, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,6 +206,7 @@
             this.button5.TabIndex = 2;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmPrincipal
             // 
@@ -260,8 +225,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelMain.ResumeLayout(false);
-            this.gbBúsqueda.ResumeLayout(false);
             this.gbGestion.ResumeLayout(false);
+            this.gbBúsqueda.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,10 +238,6 @@
         private System.Windows.Forms.ToolStripMenuItem busquedaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarTodosLosArticulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem busquedaConFiltrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestionArticulosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imagenesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargarImagenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoMarcasToolStripMenuItem;

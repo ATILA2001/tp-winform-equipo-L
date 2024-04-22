@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.listViewArticulos = new System.Windows.Forms.ListView();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -40,21 +41,10 @@
             this.lblTitulo.Location = new System.Drawing.Point(306, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(183, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(206, 26);
             this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Listados Articulos";
+            this.lblTitulo.Text = "Listado De Articulos";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
-            // 
-            // listViewArticulos
-            // 
-            this.listViewArticulos.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listViewArticulos.HideSelection = false;
-            this.listViewArticulos.Location = new System.Drawing.Point(12, 57);
-            this.listViewArticulos.Name = "listViewArticulos";
-            this.listViewArticulos.Size = new System.Drawing.Size(776, 257);
-            this.listViewArticulos.TabIndex = 2;
-            this.listViewArticulos.UseCompatibleStateImageBehavior = false;
-            this.listViewArticulos.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btnVolver
             // 
@@ -69,6 +59,14 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(24, 50);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(748, 316);
+            this.dgvArticulos.TabIndex = 17;
+            // 
             // frmMostrarTodos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,13 +74,15 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.listViewArticulos);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmMostrarTodos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMostrarTodos";
+            this.Text = "Listado de Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMostrarTodos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ListView listViewArticulos;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.DataGridView dgvArticulos;
     }
 }

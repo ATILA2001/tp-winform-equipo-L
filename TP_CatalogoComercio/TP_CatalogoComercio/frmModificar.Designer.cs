@@ -257,7 +257,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmModificar";
+            this.Text = "Gestion de Articulos";
             this.Load += new System.EventHandler(this.frmModificar_Load);
             this.gbOpcionalArt.ResumeLayout(false);
             this.gbArt.ResumeLayout(false);

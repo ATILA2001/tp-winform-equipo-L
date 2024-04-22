@@ -12,6 +12,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmMostrarTodos : Form
     {
+        private List<Articulo> listaArticulo;
         public frmMostrarTodos()
         {
             InitializeComponent();
@@ -37,6 +38,14 @@ namespace TP_CatalogoComercio
         {
             Close();
 
+        }
+
+        private void frmMostrarTodos_Load(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaArticulo = negocio.listar();
+            dgvArticulos.DataSource = listaArticulo;
+    
         }
     }
 }

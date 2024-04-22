@@ -138,7 +138,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmFiltros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "v";
+            this.Text = "Busqueda";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmFiltros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

@@ -11,8 +11,9 @@ namespace TP_CatalogoComercio
         public int Id { get; set; }
         public string Url { get; set; }
         public Imagen() { }
-        public Imagen( string Url)
+        public Imagen(int Id, string Url)
         {
+            this.Id = Id;
             this.Url = Url;
         }
 

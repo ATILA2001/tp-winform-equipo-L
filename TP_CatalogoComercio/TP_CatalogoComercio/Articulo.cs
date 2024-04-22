@@ -9,13 +9,13 @@ namespace TP_CatalogoComercio
 {
     internal class Articulo
     {
-        private int codArticulo;
+        private string codArticulo;
         private string nombre;
         private string descripcion;
         private Imagen imagen;
         private decimal precio;
 
-        public int CodigoArticulo { get; set; }
+        public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public Marca Marca { get; set; }
@@ -23,7 +23,7 @@ namespace TP_CatalogoComercio
         List<Imagen> Imagenes { get; set; }  
         public float Precio { get; set; }
         public Articulo() { }
-        public Articulo(int CodigoArticulo, string Nombre, string Descripcion, Marca Marca, Categoria Categoria, Imagen Imagen, float Precio)
+        public Articulo(string CodigoArticulo, string Nombre, string Descripcion, Marca Marca, Categoria Categoria, Imagen Imagen, float Precio)
         {
             this.CodigoArticulo = CodigoArticulo;
             this.Nombre = Nombre;
@@ -35,7 +35,7 @@ namespace TP_CatalogoComercio
             this.Imagenes.Add(Imagen);
         }
 
-        public Articulo(int v, string text1, string text2, Marca marca, Categoria categoria, Imagen imagen, decimal value)
+        public Articulo(string v, string text1, string text2, Marca marca, Categoria categoria, Imagen imagen, decimal value)
         {
             this.codArticulo = v;
             this.nombre = text1;

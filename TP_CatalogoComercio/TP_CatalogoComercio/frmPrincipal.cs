@@ -164,5 +164,15 @@ namespace TP_CatalogoComercio
             frmEliminar.MdiParent = this;
             frmEliminar.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

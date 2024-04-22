@@ -127,8 +127,9 @@
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmAgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAgregarImagen";
+            this.Text = "Editar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmAgregarImagen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

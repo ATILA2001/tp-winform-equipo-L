@@ -275,7 +275,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAgregar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAgregar";
+            this.Text = "Gestion de Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gbArt.ResumeLayout(false);
             this.gbArt.PerformLayout();

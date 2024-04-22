@@ -12,6 +12,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmListadoMarcas : Form
     {
+        private List<Marca> listaMarca;
         public frmListadoMarcas()
         {
             InitializeComponent();
@@ -40,12 +41,23 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca(txtDescripcionArt.Text);
-            //listView1.Items.Add(marca.ToString());
+            
         }
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
+        }
+
+        private void frmListadoMarcas_Load(object sender, EventArgs e)
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            listaMarca = negocio.listar();
+            dgvMarca.DataSource = listaMarca;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmListadoCategoria : Form
     {
+        private List<Categoria> listaCategoria;
         public frmListadoCategoria()
         {
             InitializeComponent();
@@ -29,8 +30,20 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria(txtDescripcionArt.Text);
-            //listView1.Items.Add(categoria.ToString());
+
+        }
+
+        private void frmListadoCategoria_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            listaCategoria = negocio.listar();
+            dgvCategoria.DataSource = listaCategoria;
+
+        }
+
+        private void lblDescripcionArt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

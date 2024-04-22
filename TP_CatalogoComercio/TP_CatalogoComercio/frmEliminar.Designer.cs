@@ -106,8 +106,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEliminar";
+            this.Text = "Gestion de Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmEliminar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
