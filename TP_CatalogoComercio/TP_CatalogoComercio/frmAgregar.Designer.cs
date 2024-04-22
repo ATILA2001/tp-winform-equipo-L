@@ -237,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1307, 641);
             this.ControlBox = false;
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnCancelarArt);

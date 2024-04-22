@@ -45,7 +45,27 @@ namespace TP_CatalogoComercio
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
             dgvArticulos.DataSource = listaArticulo;
+            //pbxArt.Load(listaArticulo[0].Imagen.Url);
     
         }
+
+        //private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+        //    artSeleccionado.Imagen = new Imagen();
+        //    cargarImagen(artSeleccionado.Imagen.Url);
+        //}
+        //private void cargarImagen(string imagen)
+        //{
+        //    try
+        //    {
+        //        pbxArt.Load(imagen);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        pbxArt.Load("https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg");
+        //    }
+
+        //}
     }
 }

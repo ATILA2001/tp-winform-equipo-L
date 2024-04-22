@@ -41,10 +41,9 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(287, 9);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(430, 14);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(168, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(247, 37);
             this.lblTitulo.TabIndex = 30;
             this.lblTitulo.Text = "Agregar Imagen";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -52,36 +51,32 @@
             // lblImagenArt
             // 
             this.lblImagenArt.AutoSize = true;
-            this.lblImagenArt.Location = new System.Drawing.Point(21, 128);
-            this.lblImagenArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblImagenArt.Location = new System.Drawing.Point(32, 197);
             this.lblImagenArt.Name = "lblImagenArt";
-            this.lblImagenArt.Size = new System.Drawing.Size(45, 13);
+            this.lblImagenArt.Size = new System.Drawing.Size(67, 20);
             this.lblImagenArt.TabIndex = 36;
             this.lblImagenArt.Text = "Imagen:";
             // 
             // txtImagenArt
             // 
-            this.txtImagenArt.Location = new System.Drawing.Point(71, 126);
-            this.txtImagenArt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtImagenArt.Location = new System.Drawing.Point(106, 194);
             this.txtImagenArt.Name = "txtImagenArt";
-            this.txtImagenArt.Size = new System.Drawing.Size(141, 20);
+            this.txtImagenArt.Size = new System.Drawing.Size(210, 26);
             this.txtImagenArt.TabIndex = 35;
             // 
             // txtCodArt
             // 
-            this.txtCodArt.Location = new System.Drawing.Point(73, 78);
-            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodArt.Location = new System.Drawing.Point(110, 120);
             this.txtCodArt.Name = "txtCodArt";
-            this.txtCodArt.Size = new System.Drawing.Size(141, 20);
+            this.txtCodArt.Size = new System.Drawing.Size(210, 26);
             this.txtCodArt.TabIndex = 34;
             // 
             // lblCodArt
             // 
             this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Location = new System.Drawing.Point(23, 82);
-            this.lblCodArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodArt.Location = new System.Drawing.Point(34, 126);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(43, 13);
+            this.lblCodArt.Size = new System.Drawing.Size(63, 20);
             this.lblCodArt.TabIndex = 33;
             this.lblCodArt.Text = "Código:";
             // 
@@ -89,10 +84,9 @@
             // 
             this.btnCancelarArt.BackColor = System.Drawing.Color.Red;
             this.btnCancelarArt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarArt.Location = new System.Drawing.Point(608, 327);
-            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelarArt.Location = new System.Drawing.Point(912, 503);
             this.btnCancelarArt.Name = "btnCancelarArt";
-            this.btnCancelarArt.Size = new System.Drawing.Size(66, 23);
+            this.btnCancelarArt.Size = new System.Drawing.Size(99, 35);
             this.btnCancelarArt.TabIndex = 32;
             this.btnCancelarArt.Text = "Cancelar";
             this.btnCancelarArt.UseVisualStyleBackColor = false;
@@ -102,10 +96,9 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(713, 327);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(1070, 503);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(66, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(99, 35);
             this.btnAgregar.TabIndex = 31;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -113,10 +106,10 @@
             // 
             // frmAgregarImagen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1307, 641);
             this.ControlBox = false;
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblImagenArt);
@@ -125,6 +118,7 @@
             this.Controls.Add(this.lblCodArt);
             this.Controls.Add(this.btnCancelarArt);
             this.Controls.Add(this.btnAgregar);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmAgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar";

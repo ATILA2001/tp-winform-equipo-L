@@ -20,11 +20,12 @@ namespace TP_CatalogoComercio
 
             try
             {
-                conexion.ConnectionString = "server=DESKTOP-LUXPABE\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "Select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio From ARTICULOS AS A "
-                                       + "INNER JOIN MARCAS AS M ON A.IdMarca = M.Id " +
-                                        "INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id";
+                                      + "INNER JOIN MARCAS AS M ON A.IdMarca = M.Id " +
+                                        "INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id ";
+
                 comando.Connection = conexion;
 
                 conexion.Open();
@@ -35,11 +36,13 @@ namespace TP_CatalogoComercio
                     Articulo aux = new Articulo();
                     aux.Marca = new Marca();
                     aux.Categoria = new Categoria();
+                    //aux.Imagen = new Imagen();
                     aux.CodigoArticulo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Marca.Descripcion = (string)lector["Marca"];
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
+                    //aux.Imagen.Url = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)lector["Precio"];
                     lista.Add(aux);
                 }
@@ -60,7 +63,7 @@ namespace TP_CatalogoComercio
             comando.Connection = conexion;
             try
             {
-                conexion.ConnectionString = "server=DESKTOP-LUXPABE\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
                     "VALUES(" + "'" + art.CodigoArticulo + "'" + "," + "'" + art.Nombre + "'" + "," + "'" + art.Descripcion + "'" + "," + art.Marca.Id + "," + art.Categoria.Id + "," + art.Precio + ")";
