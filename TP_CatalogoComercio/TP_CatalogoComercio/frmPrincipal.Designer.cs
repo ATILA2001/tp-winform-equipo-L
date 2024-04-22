@@ -42,8 +42,8 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.gbBúsqueda = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnFiltros = new System.Windows.Forms.Button();
+            this.btnVerTodos = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.gbGestion.SuspendLayout();
@@ -100,21 +100,21 @@
             // cargarImagenToolStripMenuItem
             // 
             this.cargarImagenToolStripMenuItem.Name = "cargarImagenToolStripMenuItem";
-            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cargarImagenToolStripMenuItem.Text = "Cargar imagen";
             this.cargarImagenToolStripMenuItem.Click += new System.EventHandler(this.cargarImagenToolStripMenuItem_Click);
             // 
             // listadoMarcasToolStripMenuItem
             // 
             this.listadoMarcasToolStripMenuItem.Name = "listadoMarcasToolStripMenuItem";
-            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listadoMarcasToolStripMenuItem.Text = "Listado marcas";
             this.listadoMarcasToolStripMenuItem.Click += new System.EventHandler(this.listadoMarcasToolStripMenuItem_Click);
             // 
             // listadoCategoriasToolStripMenuItem
             // 
             this.listadoCategoriasToolStripMenuItem.Name = "listadoCategoriasToolStripMenuItem";
-            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listadoCategoriasToolStripMenuItem.Text = "Listado categorias";
             this.listadoCategoriasToolStripMenuItem.Click += new System.EventHandler(this.listadoCategoriasToolStripMenuItem_Click);
             // 
@@ -134,8 +134,8 @@
             this.gbGestion.Controls.Add(this.btnEliminar);
             this.gbGestion.Controls.Add(this.btnModificar);
             this.gbGestion.Controls.Add(this.btnAgregar);
-            this.gbGestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbGestion.Location = new System.Drawing.Point(68, 99);
+            this.gbGestion.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbGestion.Location = new System.Drawing.Point(70, 99);
             this.gbGestion.Name = "gbGestion";
             this.gbGestion.Size = new System.Drawing.Size(182, 216);
             this.gbGestion.TabIndex = 1;
@@ -144,8 +144,8 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(29, 150);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(30, 150);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(122, 23);
             this.btnEliminar.TabIndex = 2;
@@ -155,8 +155,8 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(29, 100);
+            this.btnModificar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(30, 100);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(122, 23);
             this.btnModificar.TabIndex = 3;
@@ -166,8 +166,8 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(29, 52);
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(30, 50);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(122, 23);
             this.btnAgregar.TabIndex = 4;
@@ -177,36 +177,37 @@
             // 
             // gbBúsqueda
             // 
-            this.gbBúsqueda.Controls.Add(this.button1);
-            this.gbBúsqueda.Controls.Add(this.button5);
-            this.gbBúsqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBúsqueda.Location = new System.Drawing.Point(401, 99);
+            this.gbBúsqueda.Controls.Add(this.btnFiltros);
+            this.gbBúsqueda.Controls.Add(this.btnVerTodos);
+            this.gbBúsqueda.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBúsqueda.Location = new System.Drawing.Point(300, 99);
             this.gbBúsqueda.Name = "gbBúsqueda";
-            this.gbBúsqueda.Size = new System.Drawing.Size(200, 216);
+            this.gbBúsqueda.Size = new System.Drawing.Size(182, 216);
             this.gbBúsqueda.TabIndex = 0;
             this.gbBúsqueda.TabStop = false;
             this.gbBúsqueda.Text = "Búsqueda";
             // 
-            // button1
+            // btnFiltros
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(48, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFiltros.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltros.Location = new System.Drawing.Point(30, 125);
+            this.btnFiltros.Name = "btnFiltros";
+            this.btnFiltros.Size = new System.Drawing.Size(122, 23);
+            this.btnFiltros.TabIndex = 0;
+            this.btnFiltros.Text = "Filtros";
+            this.btnFiltros.UseVisualStyleBackColor = true;
+            this.btnFiltros.Click += new System.EventHandler(this.btnFiltros_Click);
             // 
-            // button5
+            // btnVerTodos
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(48, 74);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(122, 23);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnVerTodos.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerTodos.Location = new System.Drawing.Point(30, 75);
+            this.btnVerTodos.Name = "btnVerTodos";
+            this.btnVerTodos.Size = new System.Drawing.Size(122, 23);
+            this.btnVerTodos.TabIndex = 2;
+            this.btnVerTodos.Text = "Ver todos";
+            this.btnVerTodos.UseVisualStyleBackColor = true;
+            this.btnVerTodos.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmPrincipal
             // 
@@ -218,6 +219,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalogo Comercio";
@@ -248,8 +250,8 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.GroupBox gbBúsqueda;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnFiltros;
+        private System.Windows.Forms.Button btnVerTodos;
     }
 }
 
