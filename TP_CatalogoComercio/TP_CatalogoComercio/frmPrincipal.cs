@@ -167,12 +167,31 @@ namespace TP_CatalogoComercio
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            panelMain.Visible = false;
+            frmMostrarTodos frmMostrarTodos = new frmMostrarTodos();
+            frmMostrarTodos.FormClosed += (s, args) =>
+            {
+                panelMain.Visible = true;
+            };
+            frmMostrarTodos.MdiParent = this;
+            frmMostrarTodos.Show();
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnFiltros_Click(object sender, EventArgs e)
+        {
+            panelMain.Visible = false;
+            frmFiltros frmFiltros = new frmFiltros();
+            frmFiltros.FormClosed += (s, args) =>
+            {
+                panelMain.Visible = true;
+            };
+            frmFiltros.MdiParent = this;
+            frmFiltros.Show();
         }
     }
 }

@@ -39,29 +39,26 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(124, 24);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(186, 37);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(228, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(333, 37);
             this.lblTitulo.TabIndex = 23;
             this.lblTitulo.Text = "Seleccione un Artículo";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
             // txtCodArt
             // 
-            this.txtCodArt.Location = new System.Drawing.Point(58, 80);
-            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodArt.Location = new System.Drawing.Point(87, 123);
             this.txtCodArt.Name = "txtCodArt";
-            this.txtCodArt.Size = new System.Drawing.Size(141, 20);
+            this.txtCodArt.Size = new System.Drawing.Size(210, 26);
             this.txtCodArt.TabIndex = 27;
             // 
             // lblCodArt
             // 
             this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Location = new System.Drawing.Point(11, 87);
-            this.lblCodArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodArt.Location = new System.Drawing.Point(16, 134);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(43, 13);
+            this.lblCodArt.Size = new System.Drawing.Size(63, 20);
             this.lblCodArt.TabIndex = 26;
             this.lblCodArt.Text = "Código:";
             // 
@@ -69,10 +66,9 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVolver.Location = new System.Drawing.Point(299, 197);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Location = new System.Drawing.Point(448, 303);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(66, 23);
+            this.btnVolver.Size = new System.Drawing.Size(99, 35);
             this.btnVolver.TabIndex = 25;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -82,10 +78,9 @@
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.Lime;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSiguiente.Location = new System.Drawing.Point(378, 197);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSiguiente.Location = new System.Drawing.Point(567, 303);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(66, 23);
+            this.btnSiguiente.Size = new System.Drawing.Size(99, 35);
             this.btnSiguiente.TabIndex = 24;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
@@ -93,16 +88,17 @@
             // 
             // frmSeleccionarModificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1307, 641);
             this.ControlBox = false;
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.txtCodArt);
             this.Controls.Add(this.lblCodArt);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSiguiente);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmSeleccionarModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Articulos";
