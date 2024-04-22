@@ -16,6 +16,10 @@ namespace TP_CatalogoComercio
             this.Id = Id;
             this.Url = Url;
         }
+        public override string ToString()
+        {
+            return Url;
+        }
 
     }
 }

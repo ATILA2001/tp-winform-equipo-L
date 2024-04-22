@@ -35,6 +35,8 @@
             this.lblCodArt = new System.Windows.Forms.Label();
             this.btnCancelarArt = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dgvImagenes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImagenes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -111,6 +113,15 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dgvImagenes
+            // 
+            this.dgvImagenes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvImagenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvImagenes.Location = new System.Drawing.Point(73, 183);
+            this.dgvImagenes.Name = "dgvImagenes";
+            this.dgvImagenes.Size = new System.Drawing.Size(139, 150);
+            this.dgvImagenes.TabIndex = 37;
+            // 
             // frmAgregarImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +129,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvImagenes);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblImagenArt);
             this.Controls.Add(this.txtImagenArt);
@@ -130,6 +142,7 @@
             this.Text = "Editar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgregarImagen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvImagenes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Label lblCodArt;
         private System.Windows.Forms.Button btnCancelarArt;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dgvImagenes;
     }
 }
