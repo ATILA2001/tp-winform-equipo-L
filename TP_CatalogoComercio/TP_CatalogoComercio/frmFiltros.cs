@@ -12,6 +12,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmFiltros : Form
     {
+        private List<Articulo> listaArticulo;
         public frmFiltros()
         {
             InitializeComponent();
@@ -33,14 +34,37 @@ namespace TP_CatalogoComercio
             }
         }
 
-        private void lblfecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            Articulo art = new Articulo();
+            art.Marca = new Marca();
+            art.Categoria = new Categoria();
+            ArticuloNegocio artNegocio = new ArticuloNegocio();
+            try
+            {
+                art.Marca = (Marca)cbMarcaArt.SelectedItem;
+                art.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
+                listaArticulo = artNegocio.listarConFiltro(nudDesde.Value, nudHasta.Value ,art.Marca, art.Categoria);
+                dvgArticulos.DataSource = listaArticulo;
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dvgArticulos.DataSource = string.Empty;
+            nudDesde.Value = 0;
+            nudHasta .Value = 0;
+            cbCategoriaArt .SelectedIndex = 0;
+            cbMarcaArt .SelectedIndex = 0;
         }
     }
 }
