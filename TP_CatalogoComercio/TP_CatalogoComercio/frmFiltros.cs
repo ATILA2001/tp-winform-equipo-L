@@ -52,9 +52,9 @@ namespace TP_CatalogoComercio
                 listaArticulo = artNegocio.listarConFiltro(nudDesde.Value, nudHasta.Value ,art.Marca, art.Categoria);
                 dvgArticulos.DataSource = listaArticulo;
             }
-            catch (Exception Ex)
+            catch (Exception)
             {
-                throw Ex;
+                MessageBox.Show("¡Utilice el punto en vez de una coma para decimales!");
             }
         }
 

@@ -67,7 +67,7 @@ namespace TP_CatalogoComercio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS MARCAS, C.Descripcion AS CATEGORIAS, A.Precio FROM ARTICULOS AS A " +
+                comando.CommandText = "SELECT A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS MARCAS, C.Descripcion AS CATEGORIAS, A.Precio FROM ARTICULOS AS A " +
                                         "INNER JOIN MARCAS AS M ON A.IdMarca = M.Id " +
                                         "INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id " +
                                         "WHERE A.IdCategoria = " + categoria.Id + " AND A.IdMarca = " + marca.Id + " AND A.Precio BETWEEN " + desde + " AND " + hasta;
@@ -96,7 +96,6 @@ namespace TP_CatalogoComercio
                 throw Ex;
             }
         }
-
         public void agregar(Articulo art)
         {
             SqlConnection conexion = new SqlConnection();

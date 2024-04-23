@@ -12,21 +12,33 @@ namespace TP_CatalogoComercio
 {
     public partial class frmSeleccionarModificar : Form
     {
+        List<Articulo> listaArticulo;
         public frmSeleccionarModificar()
         {
             InitializeComponent();
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            Close();
-            frmModificar frmModificar = new frmModificar();
-            frmModificar.ShowDialog();
+            try
+            {
+                if(txtCodArt.Text.Trim().Length > 0)
+                {
+                    frmModificar frmModificar = new frmModificar();
+                    frmModificar.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("¡Tiene que cargar un Código de Artículo!");
+                }
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -36,7 +48,9 @@ namespace TP_CatalogoComercio
 
         private void frmSeleccionarModificar_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaArticulo = negocio.listar();
+            dgvArticulos.DataSource = listaArticulo;
         }
     }
 }
