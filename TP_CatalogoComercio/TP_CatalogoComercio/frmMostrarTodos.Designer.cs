@@ -40,9 +40,10 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(459, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(306, 9);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(303, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(206, 26);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Listado De Articulos";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -51,9 +52,10 @@
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVolver.Location = new System.Drawing.Point(1159, 528);
+            this.btnVolver.Location = new System.Drawing.Point(773, 343);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(99, 35);
+            this.btnVolver.Size = new System.Drawing.Size(66, 23);
             this.btnVolver.TabIndex = 16;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -61,35 +63,39 @@
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(13, 77);
-            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(9, 50);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 62;
-            this.dgvArticulos.Size = new System.Drawing.Size(998, 486);
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(665, 316);
             this.dgvArticulos.TabIndex = 17;
+            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // pbxArt
             // 
-            this.pbxArt.Location = new System.Drawing.Point(1036, 77);
+            this.pbxArt.Location = new System.Drawing.Point(691, 50);
+            this.pbxArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbxArt.Name = "pbxArt";
-            this.pbxArt.Size = new System.Drawing.Size(259, 268);
+            this.pbxArt.Size = new System.Drawing.Size(173, 174);
             this.pbxArt.TabIndex = 18;
             this.pbxArt.TabStop = false;
             // 
             // frmMostrarTodos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1307, 641);
+            this.ClientSize = new System.Drawing.Size(871, 417);
             this.ControlBox = false;
             this.Controls.Add(this.pbxArt);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximumSize = new System.Drawing.Size(1329, 697);
+            this.MaximumSize = new System.Drawing.Size(891, 467);
             this.Name = "frmMostrarTodos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";

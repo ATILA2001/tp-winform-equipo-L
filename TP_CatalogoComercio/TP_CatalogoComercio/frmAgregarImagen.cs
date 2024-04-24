@@ -25,8 +25,30 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("La imagen ha sido cargada exitosamente");
-            Close();
+            Imagen imagen= new Imagen();
+            ImagenNegocio imagenNegocio = new ImagenNegocio();
+            try
+            {
+                if (txtCodArt.Text.Trim().Length > 0 && txtImagen.Text.Trim() != string.Empty)
+                {
+                    imagen.Id = txtCodArt.Text.Trim();
+                    imagen.Url = txtImagen.Text.Trim();
+
+                    imagenNegocio.agregar(imagen);
+                    MessageBox.Show("¡Se agregó el registro!");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("¡Tiene que llenar los campos!");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         private void btnCancelarArt_Click(object sender, EventArgs e)
@@ -36,10 +58,35 @@ namespace TP_CatalogoComercio
 
         private void frmAgregarImagen_Load(object sender, EventArgs e)
         {
-            ImagenNegocio negocio = new ImagenNegocio();
-            listaImagen = negocio.listar();
-            //dgvImagenes.Columns["ImagenUrl"].Visible = false;
-            dgvImagenes.DataSource = listaImagen;
+            
+        }
+
+        private void txtImagenArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImagenArt_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagen.Text);
+        }
+
+        private void pbxImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxImagen.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                pbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
     }
 }

@@ -25,8 +25,8 @@ namespace TP_CatalogoComercio
             {
                 if(txtCodArt.Text.Trim().Length > 0)
                 {
-                    frmModificar frmModificar = new frmModificar();
-                    frmModificar.ShowDialog();
+                    frmAgregar frmAgregar = new frmAgregar();
+                    frmAgregar.ShowDialog();
                 }
                 else
                 {

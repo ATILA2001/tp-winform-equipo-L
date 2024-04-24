@@ -49,6 +49,11 @@ namespace TP_CatalogoComercio
     
         }
 
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         //private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         //{
         //    Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
