@@ -76,7 +76,7 @@
             this.cbCategoriaArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategoriaArt.FormattingEnabled = true;
             this.cbCategoriaArt.Location = new System.Drawing.Point(645, 103);
-            this.cbCategoriaArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCategoriaArt.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategoriaArt.Name = "cbCategoriaArt";
             this.cbCategoriaArt.Size = new System.Drawing.Size(120, 24);
             this.cbCategoriaArt.TabIndex = 1;
@@ -87,7 +87,7 @@
             this.cbMarcaArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMarcaArt.FormattingEnabled = true;
             this.cbMarcaArt.Location = new System.Drawing.Point(443, 103);
-            this.cbMarcaArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbMarcaArt.Margin = new System.Windows.Forms.Padding(2);
             this.cbMarcaArt.Name = "cbMarcaArt";
             this.cbMarcaArt.Size = new System.Drawing.Size(120, 24);
             this.cbMarcaArt.TabIndex = 0;
@@ -120,7 +120,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolver.Location = new System.Drawing.Point(98, 346);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(78, 23);
             this.btnVolver.TabIndex = 37;
@@ -133,7 +133,7 @@
             this.btnFiltrar.BackColor = System.Drawing.Color.Lime;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFiltrar.Location = new System.Drawing.Point(575, 344);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(78, 23);
             this.btnFiltrar.TabIndex = 38;
@@ -149,7 +149,7 @@
             this.dvgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgArticulos.Location = new System.Drawing.Point(98, 135);
-            this.dvgArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dvgArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.dvgArticulos.Name = "dvgArticulos";
             this.dvgArticulos.RowHeadersWidth = 62;
             this.dvgArticulos.RowTemplate.Height = 28;
@@ -163,7 +163,7 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Location = new System.Drawing.Point(686, 344);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(78, 23);
             this.btnLimpiar.TabIndex = 40;
@@ -214,9 +214,9 @@
             this.gbPrecio.Cursor = System.Windows.Forms.Cursors.Default;
             this.gbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPrecio.Location = new System.Drawing.Point(98, 79);
-            this.gbPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.gbPrecio.Name = "gbPrecio";
-            this.gbPrecio.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbPrecio.Padding = new System.Windows.Forms.Padding(2);
             this.gbPrecio.Size = new System.Drawing.Size(271, 47);
             this.gbPrecio.TabIndex = 42;
             this.gbPrecio.TabStop = false;
@@ -227,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(871, 417);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
             this.Controls.Add(this.gbPrecio);
             this.Controls.Add(this.btnLimpiar);
@@ -239,6 +239,7 @@
             this.Controls.Add(this.cbCategoriaArt);
             this.Controls.Add(this.cbMarcaArt);
             this.Controls.Add(this.lblTitulo);
+            this.MaximumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmFiltros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Busqueda";

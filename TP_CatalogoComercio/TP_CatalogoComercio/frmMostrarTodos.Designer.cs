@@ -71,16 +71,18 @@
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 62;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(665, 316);
+            this.dgvArticulos.Size = new System.Drawing.Size(665, 207);
             this.dgvArticulos.TabIndex = 17;
             this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // pbxArt
             // 
             this.pbxArt.Location = new System.Drawing.Point(691, 50);
             this.pbxArt.Margin = new System.Windows.Forms.Padding(2);
             this.pbxArt.Name = "pbxArt";
-            this.pbxArt.Size = new System.Drawing.Size(173, 174);
+            this.pbxArt.Size = new System.Drawing.Size(212, 207);
+            this.pbxArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArt.TabIndex = 18;
             this.pbxArt.TabStop = false;
             // 
@@ -89,13 +91,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(871, 417);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
             this.Controls.Add(this.pbxArt);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblTitulo);
-            this.MaximumSize = new System.Drawing.Size(891, 467);
+            this.MaximumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmMostrarTodos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Articulos";

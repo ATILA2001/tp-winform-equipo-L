@@ -22,9 +22,7 @@ namespace TP_CatalogoComercio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "Select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio From ARTICULOS AS A "
-                                      + "INNER JOIN MARCAS AS M ON A.IdMarca = M.Id " +
-                                        "INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id ";
+                comando.CommandText = "SELECT A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen FROM ARTICULOS AS A INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id INNER JOIN MARCAS AS M ON A.IdMarca =M.Id INNER JOIN IMAGENES AS I ON A.Id = I.IdArticulo";
 
                 comando.Connection = conexion;
 
@@ -36,6 +34,8 @@ namespace TP_CatalogoComercio
                     Articulo aux = new Articulo();
                     aux.Marca = new Marca();
                     aux.Categoria = new Categoria();
+                    aux.Imagenes = new List<Imagen>();
+                    Imagen iAux= new Imagen();  
                     //aux.Imagen = new Imagen();
                     aux.CodigoArticulo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
@@ -44,6 +44,8 @@ namespace TP_CatalogoComercio
                     aux.Categoria.Descripcion = (string)lector["Categoria"];
                     //aux.Imagen.Url = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)lector["Precio"];
+                    iAux.Url = (string)lector["Imagen"];
+                    aux.Imagenes.Add(iAux);
                     lista.Add(aux);
                 }
 
