@@ -32,5 +32,10 @@ namespace TP_CatalogoComercio
         {
 
         }
+
+        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,7 +57,6 @@ namespace TP_CatalogoComercio
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
             Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            //artSeleccionado.Imagenes = new List<Imagen>();
             cargarImagen(artSeleccionado.Imagenes[0].Url);
         }
         private void cargarImagen(string imagen)
