@@ -12,9 +12,17 @@ namespace TP_CatalogoComercio
 {
     public partial class frmModificar : Form
     {
+        private Articulo articulo = null;
+
         public frmModificar()
         {
             InitializeComponent();
+        }
+        internal frmModificar(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+            Text = "Modificar";
         }
 
         private void cbMarcaArt_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,7 +48,35 @@ namespace TP_CatalogoComercio
 
         private void frmModificar_Load(object sender, EventArgs e)
         {
+            //ArticuloNegocio artNegocio = new ArticuloNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            articulo.Imagen = new Imagen();
+            try
+            {
+                cbMarcaArt.DataSource = marcaNegocio.listar();
+                cbMarcaArt.ValueMember = "Id";
+                cbMarcaArt.DisplayMember = "Descripcion";
+                cbCategoriaArt.DataSource = categoriaNegocio.listar();
+                cbCategoriaArt.ValueMember = "Id";
+                cbCategoriaArt.DisplayMember = "Descripcion";
 
+                if(articulo != null)
+                {
+                    txtCodArt.Text = articulo.CodigoArticulo;
+                    txtNombreArt.Text = articulo.Nombre;
+                    txtDescripcionArt.Text = articulo.Descripcion;
+                    txtImagenArt.Text = articulo.Imagen.Url;
+                    nudPrecioArt.Value = articulo.Precio;
+                    cbMarcaArt.SelectedValue = articulo.Marca.Id;
+                    cbCategoriaArt.SelectedValue = articulo.Categoria.Id;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

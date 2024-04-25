@@ -23,15 +23,10 @@ namespace TP_CatalogoComercio
         {
             try
             {
-                if(txtCodArt.Text.Trim().Length > 0)
-                {
-                    frmAgregar frmAgregar = new frmAgregar();
-                    frmAgregar.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("¡Tiene que cargar un Código de Artículo!");
-                }
+                Articulo artSeleccionado;
+                artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmModificar frmModificar = new frmModificar(artSeleccionado);
+                frmModificar.ShowDialog();
             }
             catch (Exception Ex)
             {
@@ -51,6 +46,7 @@ namespace TP_CatalogoComercio
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
             dgvArticulos.DataSource = listaArticulo;
+            dgvArticulos.Columns["Imagen"].Visible = false;
         }
     }
 }
