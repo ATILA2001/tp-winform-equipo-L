@@ -43,5 +43,50 @@ namespace TP_CatalogoComercio
             }
 
         }
+        public void agregar(Marca marca)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "INSERT INTO MARCAS (Descripcion) VALUES ('" + marca.Descripcion + "')";
+                comando.Connection = conexion;
+
+                conexion.Open();
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally { conexion.Close(); }
+        }
+        public void eliminar(int id)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion;
+            try
+            {
+
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "DELETE FROM MARCAS WHERE Id =" + id + "";
+                ;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+            finally { conexion.Close(); }
+
+        }
     }
 }
