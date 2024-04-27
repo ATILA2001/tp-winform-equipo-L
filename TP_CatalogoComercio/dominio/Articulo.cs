@@ -10,12 +10,14 @@ namespace dominio
 {
         public class Articulo
     {
+        private int id;
         private string codArticulo;
         private string nombre;
         private string descripcion;
         private Imagen imagen;
         private decimal precio;
 
+        public int Id { get { return id;} }
         public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }

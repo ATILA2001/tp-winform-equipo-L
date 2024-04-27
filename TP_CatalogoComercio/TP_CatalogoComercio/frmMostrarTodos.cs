@@ -46,7 +46,8 @@ namespace TP_CatalogoComercio
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
-            dgvArticulos.DataSource = listaArticulo;
+            dgvArticulos.DataSource = listaArticulo;           
+            dgvArticulos.Columns["Id"].Visible = false;
             pbxArt.Load(listaArticulo[0].Imagenes[0].Url);
     
         }
@@ -58,9 +59,11 @@ namespace TP_CatalogoComercio
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            /*Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(artSeleccionado.Imagenes[0].Url);
-        }
+        */
+
+            }
         private void cargarImagen(string imagen)
         {
             try

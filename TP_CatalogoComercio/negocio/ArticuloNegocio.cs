@@ -24,10 +24,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen " +
-                    "FROM ARTICULOS AS A INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id " +
-                    "INNER JOIN MARCAS AS M ON A.IdMarca = M.Id " +
-                    "INNER JOIN IMAGENES AS I ON A.Id = I.IdArticulo");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -105,8 +102,20 @@ namespace negocio
             try
             {
                 datos.setearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
-                "VALUES(" + "'" + art.CodigoArticulo + "'" + "," + "'" + art.Nombre + "'" + "," + "'" + art.Descripcion + "'" + "," + art.Marca.Id + "," + art.Categoria.Id + "," + art.Precio + ")");
+                    "VALUES( @codigo,@nombre,@descripcion, @idMarca ,@idCategoria ,@idPrecio)");
+                datos.setearParametros("@codigo", art.CodigoArticulo);
+                datos.setearParametros("@nombre", art.Nombre);
+                datos.setearParametros("@descripcion", art.Descripcion);
+                datos.setearParametros("@idMarca", art.Marca.Id);
+                datos.setearParametros("@idCategoria", art.Categoria.Id);
+                datos.setearParametros("@idPrecio", art.Precio);
                 datos.ejecutarAccion();
+
+                /*datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) " +
+                    "VALUES( @id,@imagenUrl");
+                datos.setearParametros("@id", art.Id);
+                datos.setearParametros("@imagenUrl", art.Imagenes.
+                */
             }
             catch (Exception Ex)
             {
@@ -123,7 +132,8 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id =" + id + "");
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id =@id");
+                datos.setearParametros("@id", id);
                 datos.ejecutarAccion();
             }
             catch (Exception Ex)
