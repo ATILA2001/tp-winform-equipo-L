@@ -56,6 +56,7 @@
             this.txtCodArt.Name = "txtCodArt";
             this.txtCodArt.Size = new System.Drawing.Size(141, 23);
             this.txtCodArt.TabIndex = 27;
+            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
             // 
             // lblCodArt
             // 
@@ -110,6 +111,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(665, 245);
             this.dgvArticulos.TabIndex = 28;
+            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // frmSeleccionarModificar
             // 

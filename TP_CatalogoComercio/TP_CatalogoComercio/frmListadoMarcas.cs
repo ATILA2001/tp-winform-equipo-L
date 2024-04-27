@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -89,5 +91,9 @@ namespace TP_CatalogoComercio
             dgvMarca.DataSource = listaMarca;
         }
 
+        private void dgvMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

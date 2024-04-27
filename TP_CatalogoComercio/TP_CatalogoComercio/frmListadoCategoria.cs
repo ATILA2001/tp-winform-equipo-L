@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -42,6 +44,16 @@ namespace TP_CatalogoComercio
         }
 
         private void lblDescripcionArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

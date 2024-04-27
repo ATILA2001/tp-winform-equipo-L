@@ -6,9 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace TP_CatalogoComercio
+namespace dominio
 {
-    internal class Articulo
+        public class Articulo
     {
         private string codArticulo;
         private string nombre;

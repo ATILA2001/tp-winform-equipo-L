@@ -156,6 +156,7 @@
             this.dvgArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgArticulos.Size = new System.Drawing.Size(666, 179);
             this.dvgArticulos.TabIndex = 39;
+            this.dvgArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgArticulos_CellContentClick);
             // 
             // btnLimpiar
             // 

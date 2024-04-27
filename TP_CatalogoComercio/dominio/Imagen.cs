@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TP_CatalogoComercio
+namespace dominio
 {
-    internal class Imagen
+    public class Imagen
     {
         public string Id { get; set; }
         public string Url { get; set; }

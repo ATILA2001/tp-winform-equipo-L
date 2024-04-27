@@ -108,6 +108,7 @@
             this.btEliminar.TabIndex = 39;
             this.btEliminar.Text = "Eliminar";
             this.btEliminar.UseVisualStyleBackColor = false;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -131,6 +132,7 @@
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.Size = new System.Drawing.Size(245, 204);
             this.dgvCategoria.TabIndex = 45;
+            this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
             // 
             // lblDescripcion
             // 
