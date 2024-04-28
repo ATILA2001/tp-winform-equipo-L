@@ -83,7 +83,6 @@
             // 
             // nudPrecioArt
             // 
-            this.nudPrecioArt.DecimalPlaces = 2;
             this.nudPrecioArt.Location = new System.Drawing.Point(123, 225);
             this.nudPrecioArt.Maximum = new decimal(new int[] {
             100000000,

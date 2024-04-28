@@ -41,9 +41,36 @@ namespace TP_CatalogoComercio
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("El articulo ha sido modificado exitosamente");
-            Close();
+        {  
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if(articulo == null)
+                    articulo = new Articulo();
+                articulo.Imagen = new Imagen();
+                articulo.Marca = new Marca();
+                articulo.Categoria = new Categoria();
+                articulo.CodigoArticulo = txtCodArt.Text;
+                articulo.Nombre = txtNombreArt.Text;
+                articulo.Descripcion = txtDescripcionArt.Text;
+                articulo.Imagen.Url = txtImagenArt.Text;
+                articulo.Precio = nudPrecioArt.Value;
+                articulo.Marca = (Marca)cbMarcaArt.SelectedItem;
+                articulo.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
+                
+                if(articulo.Id != 0)
+                {
+                    negocio.modificar(articulo);
+                    MessageBox.Show("El articulo ha sido modificado exitosamente");
+                    Close();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         private void frmModificar_Load(object sender, EventArgs e)

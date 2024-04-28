@@ -49,10 +49,11 @@
             // txtCodArt
             // 
             this.txtCodArt.Location = new System.Drawing.Point(58, 91);
-            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodArt.Name = "txtCodArt";
             this.txtCodArt.Size = new System.Drawing.Size(141, 20);
             this.txtCodArt.TabIndex = 31;
+            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
             // 
             // lblCodArt
             // 
@@ -69,7 +70,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolver.Location = new System.Drawing.Point(368, 249);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(66, 23);
             this.btnVolver.TabIndex = 29;
@@ -82,7 +83,7 @@
             this.btnSiguiente.BackColor = System.Drawing.Color.Lime;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Location = new System.Drawing.Point(447, 249);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(66, 23);
             this.btnSiguiente.TabIndex = 28;
@@ -103,7 +104,7 @@
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblTitulo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1000, 600);
             this.Name = "frmEliminar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

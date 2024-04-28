@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,9 +33,12 @@ namespace TP_CatalogoComercio
             {
                 if (txtCodArt.Text.Trim().Length > 0 && txtImagen.Text.Trim() != string.Empty)
                 {
-                    imagen.Id = txtCodArt.Text.Trim();
+                    string codArt = txtCodArt.Text.Trim();
                     imagen.Url = txtImagen.Text.Trim();
 
+                    imagen.Id = imagenNegocio.searchId(codArt);
+                    if (imagen.Id == "0")
+                        Close();
                     imagenNegocio.agregar(imagen);
                     MessageBox.Show("¡Se agregó el registro!");
                     Close();
@@ -87,6 +92,11 @@ namespace TP_CatalogoComercio
             {
                 pbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
+        }
+
+        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

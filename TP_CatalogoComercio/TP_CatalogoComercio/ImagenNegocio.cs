@@ -44,6 +44,39 @@ namespace TP_CatalogoComercio
 
         }
 
+        public string searchId(string codArt)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            SqlDataReader lector;
+
+            try
+            {
+                string Id;
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "SELECT A.Id FROM ARTICULOS AS A WHERE A.Codigo = '" + codArt + "'"; 
+                comando.Connection = conexion;
+
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                if(lector.Read())
+                {
+                    Id = lector["Id"].ToString();
+                }
+                else
+                {
+                    Id = "0";
+                }
+                conexion.Close();
+                return Id;  
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public void agregar(Imagen imagen)
         {
             SqlConnection conexion = new SqlConnection();
@@ -53,7 +86,8 @@ namespace TP_CatalogoComercio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "INSERT INTO IMAGENES(IdArticulo,ImagenUrl) values (" + imagen.Id + "," + "'" + imagen.Url+ "'"+")";
+                comando.CommandText = "INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (" + imagen.Id + ", '" + imagen.Url + "')";
+                                      //"INSERT INTO IMAGENES (IdArticulo,ImagenUrl) values (" + imagen.Id + "," + "'" + imagen.Url+ "'"+")";
                 conexion.Open();
                 comando.ExecuteNonQuery();
             }
@@ -64,5 +98,6 @@ namespace TP_CatalogoComercio
             }
             finally { conexion.Close(); }
         }
+       
     }
 }

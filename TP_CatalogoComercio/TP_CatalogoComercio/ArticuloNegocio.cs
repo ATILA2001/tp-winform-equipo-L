@@ -22,7 +22,11 @@ namespace TP_CatalogoComercio
             {
                 conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "SELECT A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.IdMarca, A.IdCategoria, A.Precio, I.ImagenUrl AS Imagen FROM ARTICULOS AS A INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id INNER JOIN MARCAS AS M ON A.IdMarca =M.Id INNER JOIN IMAGENES AS I ON A.Id = I.IdArticulo";
+
+                comando.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.IdMarca, A.IdCategoria, A.Precio, I.ImagenUrl AS Imagen FROM ARTICULOS AS A INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id INNER JOIN MARCAS AS M ON A.IdMarca =M.Id INNER JOIN IMAGENES AS I ON A.Id = I.IdArticulo";
+
+
+                //comando.CommandText = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen FROM ARTICULOS AS A INNER JOIN CATEGORIAS AS C ON A.IdCategoria = C.Id INNER JOIN MARCAS AS M ON A.IdMarca = M.Id INNER JOIN IMAGENES AS I ON A.Id = I.IdArticulo";
 
                 comando.Connection = conexion;
 
@@ -37,6 +41,7 @@ namespace TP_CatalogoComercio
                     aux.Imagenes = new List<Imagen>();
                     Imagen iAux= new Imagen();
                     //aux.Imagen = new Imagen();
+                    aux.Id = (int)lector["Id"];
                     aux.CodigoArticulo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
@@ -111,6 +116,27 @@ namespace TP_CatalogoComercio
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
                     "VALUES(" + "'" + art.CodigoArticulo + "'" + "," + "'" + art.Nombre + "'" + "," + "'" + art.Descripcion + "'" + "," + art.Marca.Id + "," + art.Categoria.Id + "," + art.Precio + ")";
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+            finally { conexion.Close(); }
+        }       
+        public void modificar(Articulo art)
+        {
+            SqlConnection conexion = new SqlConnection();
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = conexion;
+            try
+            {
+                conexion.ConnectionString = "server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
+                comando.CommandText = "UPDATE ARTICULOS SET Codigo = '" + art.CodigoArticulo + "', Nombre = '" + art.Nombre + "', Descripcion = '" + art.Descripcion + 
+                    "', IdMarca = " + art.Marca.Id + ", IdCategoria = " + art.Categoria.Id + ", Precio = " + art.Precio + " WHERE Id = " + art.Id;
                 conexion.Open();
                 comando.ExecuteNonQuery();
             }

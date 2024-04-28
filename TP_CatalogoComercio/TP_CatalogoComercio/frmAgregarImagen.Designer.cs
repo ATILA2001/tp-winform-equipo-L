@@ -64,7 +64,7 @@
             // txtImagen
             // 
             this.txtImagen.Location = new System.Drawing.Point(96, 109);
-            this.txtImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtImagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(144, 20);
             this.txtImagen.TabIndex = 35;
@@ -74,10 +74,11 @@
             // txtCodArt
             // 
             this.txtCodArt.Location = new System.Drawing.Point(96, 66);
-            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodArt.Name = "txtCodArt";
             this.txtCodArt.Size = new System.Drawing.Size(144, 20);
             this.txtCodArt.TabIndex = 34;
+            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
             // 
             // lblCodArt
             // 
@@ -94,7 +95,7 @@
             this.btnCancelarArt.BackColor = System.Drawing.Color.Red;
             this.btnCancelarArt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarArt.Location = new System.Drawing.Point(36, 162);
-            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarArt.Name = "btnCancelarArt";
             this.btnCancelarArt.Size = new System.Drawing.Size(66, 23);
             this.btnCancelarArt.TabIndex = 32;
@@ -107,7 +108,7 @@
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Location = new System.Drawing.Point(141, 162);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 23);
             this.btnAgregar.TabIndex = 31;
