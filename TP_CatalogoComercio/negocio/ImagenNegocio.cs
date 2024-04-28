@@ -69,7 +69,9 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (" + imagen.Id + ", '" + imagen.Url + "')");
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@idArticulo, @Imagen)");
+                datos.setearParametros("@idArticulo", imagen.Id);
+                datos.setearParametros("@Imagen", imagen.Url);
                 datos.ejecutarAccion();
             }
             catch (Exception Ex)

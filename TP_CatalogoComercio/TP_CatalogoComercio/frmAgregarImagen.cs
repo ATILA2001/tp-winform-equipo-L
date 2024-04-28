@@ -31,6 +31,8 @@ namespace TP_CatalogoComercio
         {
             Imagen imagen= new Imagen();
             ImagenNegocio imagenNegocio = new ImagenNegocio();
+            ArticuloNegocio negocio= new ArticuloNegocio();
+            List<Articulo> listaArticulos = new List<Articulo>();
             try
             {
                 if (txtCodArt.Text.Trim().Length > 0 && txtImagen.Text.Trim() != string.Empty)
@@ -41,6 +43,14 @@ namespace TP_CatalogoComercio
                     imagen.Id = imagenNegocio.searchId(codArt);
                     if (imagen.Id == "0")
                         Close();
+                    listaArticulos = negocio.listar();
+                    foreach (Articulo articulo in listaArticulos)
+                    {
+                        if(codArt == articulo.CodigoArticulo)
+                        {
+                            articulo.Imagenes.Add(imagen);
+                        }
+                    }
                     imagenNegocio.agregar(imagen);
                     MessageBox.Show("¡Se agregó el registro!");
                     Close();

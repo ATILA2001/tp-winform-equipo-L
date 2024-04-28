@@ -107,7 +107,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(141, 162);
+            this.btnAgregar.Location = new System.Drawing.Point(145, 162);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 23);

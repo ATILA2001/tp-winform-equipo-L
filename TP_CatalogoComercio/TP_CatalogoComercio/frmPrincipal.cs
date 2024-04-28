@@ -54,7 +54,7 @@ namespace TP_CatalogoComercio
             frmSeleccionar.Show();
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        /*private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelMain.Visible = false;
             frmEliminar frmEliminar = new frmEliminar();
@@ -64,7 +64,7 @@ namespace TP_CatalogoComercio
             };
             frmEliminar.MdiParent= this;
             frmEliminar.Show();
-        }
+        }*/
 
         private void gestionArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {

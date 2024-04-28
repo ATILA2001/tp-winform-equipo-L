@@ -29,67 +29,79 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtCodArt = new System.Windows.Forms.TextBox();
-            this.lblCodArt = new System.Windows.Forms.Label();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(177, 22);
+            this.lblTitulo.Location = new System.Drawing.Point(107, 26);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(171, 26);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Eliminar Artículo";
             // 
-            // txtCodArt
+            // dgvArticulos
             // 
-            this.txtCodArt.Location = new System.Drawing.Point(58, 91);
-            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodArt.Name = "txtCodArt";
-            this.txtCodArt.Size = new System.Drawing.Size(141, 20);
-            this.txtCodArt.TabIndex = 31;
-            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
+            this.dgvArticulos.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgvArticulos.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToDeleteRows = false;
+            this.dgvArticulos.AllowUserToOrderColumns = true;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(112, 139);
+            this.dgvArticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvArticulos.MultiSelect = false;
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersWidth = 62;
+            this.dgvArticulos.RowTemplate.Height = 28;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(665, 245);
+            this.dgvArticulos.TabIndex = 35;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // lblCodArt
+            // label1
             // 
-            this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Location = new System.Drawing.Point(11, 98);
-            this.lblCodArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(43, 13);
-            this.lblCodArt.TabIndex = 30;
-            this.lblCodArt.Text = "Código:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(323, 95);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 26);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Seleccione un Artículo";
             // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Red;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVolver.Location = new System.Drawing.Point(368, 249);
+            this.btnVolver.Location = new System.Drawing.Point(112, 422);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(66, 23);
-            this.btnVolver.TabIndex = 29;
+            this.btnVolver.TabIndex = 34;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.Lime;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSiguiente.Location = new System.Drawing.Point(447, 249);
+            this.btnSiguiente.Location = new System.Drawing.Point(710, 422);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(66, 23);
-            this.btnSiguiente.TabIndex = 28;
+            this.btnSiguiente.TabIndex = 33;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
             // 
             // frmEliminar
             // 
@@ -98,8 +110,8 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.txtCodArt);
-            this.Controls.Add(this.lblCodArt);
+            this.Controls.Add(this.dgvArticulos);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblTitulo);
@@ -111,6 +123,7 @@
             this.Text = "Gestion de Articulos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmEliminar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,8 +132,8 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtCodArt;
-        private System.Windows.Forms.Label lblCodArt;
+        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnSiguiente;
     }

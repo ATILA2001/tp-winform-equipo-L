@@ -48,7 +48,7 @@ namespace TP_CatalogoComercio
             listaArticulo = negocio.listar();
             dgvArticulos.DataSource = listaArticulo;           
             dgvArticulos.Columns["Id"].Visible = false;
-            pbxArt.Load(listaArticulo[0].Imagenes[0].Url);
+            //pbxArt.Load(listaArticulo[0].Imagenes[0].Url);
     
         }
 

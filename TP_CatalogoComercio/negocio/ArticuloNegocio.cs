@@ -24,7 +24,9 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, A.IdMarca, A.IdCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, C.Descripcion AS Categoria, C.Id, M.Descripcion AS Marca, M.Id, A.Precio FROM ARTICULOS A INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id INNER JOIN MARCAS M ON A.IdMarca = M.Id");
+                //datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
+                //datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, A.IdMarca, A.IdCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -33,18 +35,17 @@ namespace negocio
                     aux.Categoria = new Categoria();
                     aux.Imagenes = new List<Imagen>();
                     Imagen iAux = new Imagen();
-                    //aux.Imagen = new Imagen();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.CodigoArticulo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
-                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
-                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
-                    //aux.Imagen.Url = (string)lector["ImagenUrl"];
+                    aux.Categoria.Id = (int)datos.Lector["Id"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.Marca.Id = (int)datos.Lector["Id"];
+                    //iAux.Url = (string)datos.Lector["Imagen"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
-                    iAux.Url = (string)datos.Lector["Imagen"];
+                    //aux.Imagenes = (string)datos.Lector["Imagen"];
                     aux.Imagenes.Add(iAux);
                     lista.Add(aux);
                 }
@@ -104,8 +105,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
-                    "VALUES( @codigo,@nombre,@descripcion, @idMarca ,@idCategoria ,@idPrecio)");
+                datos.setearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES( @codigo,@nombre,@descripcion, @idMarca ,@idCategoria ,@idPrecio) ");
                 datos.setearParametros("@codigo", art.CodigoArticulo);
                 datos.setearParametros("@nombre", art.Nombre);
                 datos.setearParametros("@descripcion", art.Descripcion);
@@ -149,34 +149,7 @@ namespace negocio
             }
 
         }
-        public string searchId(string codArt)
-        {
-            AccesoDatos datos = new AccesoDatos();
-
-            try
-            {
-                string Id;
-                datos.setearConsulta("SELECT A.Id FROM ARTICULOS AS A WHERE A.Codigo = '" + codArt + "'");
-                if (datos.Lector.Read())
-                {
-                    Id = datos.Lector["Id"].ToString();
-                }
-                else
-                {
-                    Id = "0";
-                }
-                return Id;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }
-        public void modificar(Articulo articulo)
+            public void modificar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try

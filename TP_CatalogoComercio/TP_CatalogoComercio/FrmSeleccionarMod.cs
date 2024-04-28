@@ -29,6 +29,7 @@ namespace TP_CatalogoComercio
                 artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 frmModificar frmModificar = new frmModificar(artSeleccionado);
                 frmModificar.ShowDialog();
+                cargar();
             }
             catch (Exception Ex)
             {
@@ -60,6 +61,20 @@ namespace TP_CatalogoComercio
         private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                dgvArticulos.DataSource = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

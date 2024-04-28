@@ -27,8 +27,7 @@ namespace TP_CatalogoComercio
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Articulo art = new Articulo();
-            art.Marca = new Marca();
-            art.Categoria = new Categoria();
+            Imagen img = new Imagen();
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
@@ -39,6 +38,7 @@ namespace TP_CatalogoComercio
                     art.Descripcion = txtDescripcionArt.Text.Trim();
                     art.Marca = (Marca)cbMarcaArt.SelectedItem;
                     art.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
+                    img.Url = txtImagenArt.Text.Trim();
                     art.Precio = nudPrecioArt.Value;
 
                     artNegocio.agregar(art);

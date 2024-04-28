@@ -19,16 +19,28 @@ namespace TP_CatalogoComercio
             InitializeComponent();
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
         {
             Articulo art = new Articulo();
+            Articulo seleccionado;
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-            string codeToDelete = txtCodArt.Text.Trim();
-            string id = articuloNegocio.searchId(codeToDelete);
-            articuloNegocio.eliminar(id);
-            MessageBox.Show("El articulo ha sido eliminado exitosamente");
-            limpiarControles();
-            Close();
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Desea eliminar este artículo?", "Eliminando artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    articuloNegocio.eliminar(seleccionado.Id.ToString());
+                    MessageBox.Show("El articulo ha sido eliminado exitosamente");
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            //Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -38,25 +50,41 @@ namespace TP_CatalogoComercio
 
         private void frmEliminar_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            dgvArticulos.DataSource = negocio.listar();
+            dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
         }
 
         private void txtCodArt_TextChanged(object sender, EventArgs e)
         {
 
         }
-        private void limpiarControles()
+
+        private void btnVolver_Click_1(object sender, EventArgs e)
         {
-            MarcaNegocio marca = new MarcaNegocio();
-            CategoriaNegocio categoria = new CategoriaNegocio();
+            Close();
+        }
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
             try
             {
-                txtCodArt.Text = string.Empty;
+                dgvArticulos.DataSource = negocio.listar();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(Ex.ToString());
+
+                MessageBox.Show(ex.ToString());
             }
         }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
