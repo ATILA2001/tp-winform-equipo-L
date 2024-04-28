@@ -24,7 +24,7 @@ namespace TP_CatalogoComercio
         {
             InitializeComponent();
             this.articulo = articulo;
-            Text = "Modificar";
+            Text = "Modificar: " + articulo.Nombre;
         }
 
         private void cbMarcaArt_SelectedIndexChanged(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmAgregarImagen : Form
     {
-        private List<Imagen> listaImagen;
+        //private List<Imagen> listaImagen;
         public frmAgregarImagen()
         {
             InitializeComponent();
@@ -90,7 +90,7 @@ namespace TP_CatalogoComercio
             {
                 pbxImagen.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }

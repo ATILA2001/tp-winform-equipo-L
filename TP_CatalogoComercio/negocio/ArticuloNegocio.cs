@@ -24,7 +24,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, A.IdMarca, A.IdCategoria, C.Descripcion AS Categoria, A.Precio, I.ImagenUrl AS Imagen from ARTICULOS A inner join CATEGORIAS C on A.IdCategoria = c.Id inner join MARCAS M on A.IdMarca = M.Id inner join IMAGENES I on A.Id = I.IdArticulo");
                 datos.ejecutarLectura();
                 while (datos.Lector.Read())
                 {
@@ -34,10 +34,13 @@ namespace negocio
                     aux.Imagenes = new List<Imagen>();
                     Imagen iAux = new Imagen();
                     //aux.Imagen = new Imagen();
+                    aux.Id = (int)datos.Lector["Id"];
                     aux.CodigoArticulo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     //aux.Imagen.Url = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
@@ -172,7 +175,29 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+        }
+        public void modificar(Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id");
+                datos.setearParametros("@Codigo", articulo.CodigoArticulo);
+                datos.setearParametros("@Nombre", articulo.Nombre);
+                datos.setearParametros("@Descripcion", articulo.Descripcion);
+                datos.setearParametros("@IdMarca", articulo.Marca.Id);
+                datos.setearParametros("@IdCategoria", articulo.Categoria.Id);
+                datos.setearParametros("@Precio", articulo.Precio);
+                datos.setearParametros("@Id", articulo.Id);
 
+                datos.ejecutarAccion();
+            }
+            catch (Exception Ex)
+            {
+
+                throw Ex;
+            }
+            finally { datos.cerrarConexion(); }
         }
     }
 }

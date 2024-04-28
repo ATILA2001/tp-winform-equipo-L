@@ -59,22 +59,18 @@ namespace TP_CatalogoComercio
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            /*Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(artSeleccionado.Imagenes[0].Url);
-<<<<<<< HEAD
             dgvArticulos.Columns["Imagen"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
         }
-=======
-        */
-
-            }
->>>>>>> 991dcb0cfad13e7540e981996e211a0d473d89c2
+        
         private void cargarImagen(string imagen)
         {
             try
             {
                 pbxArt.Load(imagen);
+                
             }
             catch (Exception)
             {

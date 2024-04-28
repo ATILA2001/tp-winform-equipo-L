@@ -49,6 +49,7 @@ namespace TP_CatalogoComercio
             listaArticulo = negocio.listar();
             dgvArticulos.DataSource = listaArticulo;
             dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
         }
 
         private void txtCodArt_TextChanged(object sender, EventArgs e)

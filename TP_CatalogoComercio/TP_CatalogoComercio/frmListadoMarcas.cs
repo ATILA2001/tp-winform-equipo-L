@@ -67,7 +67,7 @@ namespace TP_CatalogoComercio
             }
         }
 
-        private DataGridViewRow filaSeleccionada;
+        //private DataGridViewRow filaSeleccionada;
 
 
         private void dgvMarca_SelectionChanged(object sender, EventArgs e)

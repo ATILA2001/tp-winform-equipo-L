@@ -53,6 +53,8 @@ namespace TP_CatalogoComercio
                 art.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
                 listaArticulo = artNegocio.listarConFiltro(nudDesde.Value, nudHasta.Value ,art.Marca, art.Categoria);
                 dvgArticulos.DataSource = listaArticulo;
+                dvgArticulos.Columns["Imagen"].Visible = false;
+                dvgArticulos.Columns["Id"].Visible = false;
             }
             catch (Exception)
             {
