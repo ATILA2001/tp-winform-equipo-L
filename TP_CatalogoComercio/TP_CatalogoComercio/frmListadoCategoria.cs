@@ -15,6 +15,7 @@ namespace TP_CatalogoComercio
     public partial class frmListadoCategoria : Form
     {
         private List<Categoria> listaCategoria;
+        Categoria categoriaSeleccionada = new Categoria();
         public frmListadoCategoria()
         {
             InitializeComponent();
@@ -32,8 +33,29 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Categoria categoria = new Categoria();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                if (txtDescripcion.Text.Trim() != string.Empty)
+                {
+                    categoria.Descripcion = txtDescripcion.Text.Trim();
+                    categoriaNegocio.agregar(categoria);
+                    MessageBox.Show("¡Se agregó el registro!");
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("¡Tiene que llenar los campos!");
+                }
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
         }
+
 
         private void frmListadoCategoria_Load(object sender, EventArgs e)
         {
@@ -50,12 +72,26 @@ namespace TP_CatalogoComercio
 
         private void btEliminar_Click(object sender, EventArgs e)
         {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            categoriaNegocio.eliminar(categoriaSeleccionada.Id);
+            MessageBox.Show("¡Se elimino correctamente el registro!");
+            Close();
 
         }
 
         private void dgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCategoria_SelectionChanged(object sender, EventArgs e)
+        {
+            categoriaSeleccionada = (Categoria)dgvCategoria.CurrentRow.DataBoundItem;
         }
     }
 }

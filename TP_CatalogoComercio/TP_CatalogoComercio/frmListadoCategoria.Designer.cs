@@ -31,13 +31,11 @@
             this.bnVolver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.btEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvCategoria = new System.Windows.Forms.DataGridView();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategoria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +43,10 @@
             // 
             this.bnVolver.BackColor = System.Drawing.Color.Red;
             this.bnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bnVolver.Location = new System.Drawing.Point(705, 374);
-            this.bnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.bnVolver.Location = new System.Drawing.Point(940, 460);
+            this.bnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bnVolver.Name = "bnVolver";
-            this.bnVolver.Size = new System.Drawing.Size(66, 23);
+            this.bnVolver.Size = new System.Drawing.Size(88, 28);
             this.bnVolver.TabIndex = 44;
             this.bnVolver.Text = "Volver";
             this.bnVolver.UseVisualStyleBackColor = false;
@@ -58,10 +56,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 193);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 42;
             this.label1.Text = "Listado actual";
             // 
@@ -69,42 +66,21 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(300, 9);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(400, 11);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(228, 26);
+            this.lblTitulo.Size = new System.Drawing.Size(284, 31);
             this.lblTitulo.TabIndex = 37;
             this.lblTitulo.Text = "Gestion de Categorias";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
-            // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(11, 96);
-            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(90, 20);
-            this.lblId.TabIndex = 41;
-            this.lblId.Text = "Ingresar Id:";
-            this.lblId.Click += new System.EventHandler(this.lblDescripcionArt_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(174, 96);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(141, 20);
-            this.txtId.TabIndex = 40;
             // 
             // btEliminar
             // 
             this.btEliminar.BackColor = System.Drawing.Color.Red;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btEliminar.Location = new System.Drawing.Point(436, 374);
-            this.btEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btEliminar.Location = new System.Drawing.Point(581, 460);
+            this.btEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btEliminar.Name = "btEliminar";
-            this.btEliminar.Size = new System.Drawing.Size(66, 23);
+            this.btEliminar.Size = new System.Drawing.Size(88, 28);
             this.btEliminar.TabIndex = 39;
             this.btEliminar.Text = "Eliminar";
             this.btEliminar.UseVisualStyleBackColor = false;
@@ -114,10 +90,10 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(338, 142);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Location = new System.Drawing.Point(451, 136);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(66, 23);
+            this.btnAgregar.Size = new System.Drawing.Size(88, 28);
             this.btnAgregar.TabIndex = 38;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -128,49 +104,51 @@
             this.dgvCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCategoria.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(174, 193);
+            this.dgvCategoria.Location = new System.Drawing.Point(232, 238);
+            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCategoria.Name = "dgvCategoria";
-            this.dgvCategoria.Size = new System.Drawing.Size(245, 204);
+            this.dgvCategoria.RowHeadersWidth = 51;
+            this.dgvCategoria.Size = new System.Drawing.Size(327, 251);
             this.dgvCategoria.TabIndex = 45;
             this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
+            this.dgvCategoria.SelectionChanged += new System.EventHandler(this.dgvCategoria_SelectionChanged);
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(11, 142);
-            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcion.Location = new System.Drawing.Point(15, 136);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(159, 20);
+            this.lblDescripcion.Size = new System.Drawing.Size(196, 25);
             this.lblDescripcion.TabIndex = 46;
             this.lblDescripcion.Text = "Ingresar Descripcion:";
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 142);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 47;
+            this.txtDescripcion.Location = new System.Drawing.Point(232, 136);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(187, 22);
+            this.txtDescripcion.TabIndex = 47;
+            this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmListadoCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1309, 681);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.dgvCategoria);
             this.Controls.Add(this.bnVolver);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.lblId);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.MaximumSize = new System.Drawing.Size(1000, 600);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1327, 728);
             this.Name = "frmListadoCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar";
@@ -187,12 +165,10 @@
         private System.Windows.Forms.Button bnVolver;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvCategoria;
         private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDescripcion;
     }
 }
