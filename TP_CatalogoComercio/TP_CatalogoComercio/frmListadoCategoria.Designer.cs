@@ -43,11 +43,11 @@
             // 
             this.bnVolver.BackColor = System.Drawing.Color.Red;
             this.bnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bnVolver.Location = new System.Drawing.Point(940, 460);
-            this.bnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bnVolver.Location = new System.Drawing.Point(907, 330);
+            this.bnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.bnVolver.Name = "bnVolver";
-            this.bnVolver.Size = new System.Drawing.Size(88, 28);
-            this.bnVolver.TabIndex = 44;
+            this.bnVolver.Size = new System.Drawing.Size(66, 23);
+            this.bnVolver.TabIndex = 4;
             this.bnVolver.Text = "Volver";
             this.bnVolver.UseVisualStyleBackColor = false;
             this.bnVolver.Click += new System.EventHandler(this.bnVolver_Click);
@@ -56,9 +56,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 238);
+            this.label1.Location = new System.Drawing.Point(28, 127);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 42;
             this.label1.Text = "Listado actual";
             // 
@@ -66,9 +67,10 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(400, 11);
+            this.lblTitulo.Location = new System.Drawing.Point(300, 9);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(284, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(228, 26);
             this.lblTitulo.TabIndex = 37;
             this.lblTitulo.Text = "Gestion de Categorias";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -77,11 +79,11 @@
             // 
             this.btEliminar.BackColor = System.Drawing.Color.Red;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btEliminar.Location = new System.Drawing.Point(581, 460);
-            this.btEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btEliminar.Location = new System.Drawing.Point(647, 330);
+            this.btEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btEliminar.Name = "btEliminar";
-            this.btEliminar.Size = new System.Drawing.Size(88, 28);
-            this.btEliminar.TabIndex = 39;
+            this.btEliminar.Size = new System.Drawing.Size(66, 23);
+            this.btEliminar.TabIndex = 3;
             this.btEliminar.Text = "Eliminar";
             this.btEliminar.UseVisualStyleBackColor = false;
             this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
@@ -90,11 +92,11 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(451, 136);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(361, 75);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(88, 28);
-            this.btnAgregar.TabIndex = 38;
+            this.btnAgregar.Size = new System.Drawing.Size(66, 23);
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -104,12 +106,11 @@
             this.dgvCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCategoria.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategoria.Location = new System.Drawing.Point(232, 238);
-            this.dgvCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCategoria.Location = new System.Drawing.Point(199, 127);
             this.dgvCategoria.Name = "dgvCategoria";
             this.dgvCategoria.RowHeadersWidth = 51;
-            this.dgvCategoria.Size = new System.Drawing.Size(327, 251);
-            this.dgvCategoria.TabIndex = 45;
+            this.dgvCategoria.Size = new System.Drawing.Size(422, 226);
+            this.dgvCategoria.TabIndex = 2;
             this.dgvCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategoria_CellContentClick);
             this.dgvCategoria.SelectionChanged += new System.EventHandler(this.dgvCategoria_SelectionChanged);
             // 
@@ -117,27 +118,28 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(15, 136);
+            this.lblDescripcion.Location = new System.Drawing.Point(28, 73);
+            this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(196, 25);
+            this.lblDescripcion.Size = new System.Drawing.Size(159, 20);
             this.lblDescripcion.TabIndex = 46;
             this.lblDescripcion.Text = "Ingresar Descripcion:";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(232, 136);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(199, 75);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(187, 22);
-            this.txtDescripcion.TabIndex = 47;
+            this.txtDescripcion.Size = new System.Drawing.Size(141, 20);
+            this.txtDescripcion.TabIndex = 0;
             this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmListadoCategoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1309, 681);
+            this.ClientSize = new System.Drawing.Size(984, 400);
             this.ControlBox = false;
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
@@ -147,8 +149,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1327, 728);
+            this.MaximumSize = new System.Drawing.Size(1000, 439);
             this.Name = "frmListadoCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar";

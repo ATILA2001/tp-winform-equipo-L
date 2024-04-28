@@ -55,11 +55,11 @@
             // 
             this.btEliminar.BackColor = System.Drawing.Color.Red;
             this.btEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btEliminar.Location = new System.Drawing.Point(512, 342);
-            this.btEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btEliminar.Location = new System.Drawing.Point(641, 329);
+            this.btEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btEliminar.Name = "btEliminar";
             this.btEliminar.Size = new System.Drawing.Size(66, 23);
-            this.btEliminar.TabIndex = 31;
+            this.btEliminar.TabIndex = 3;
             this.btEliminar.Text = "Eliminar";
             this.btEliminar.UseVisualStyleBackColor = false;
             this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
@@ -68,11 +68,11 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAgregar.Location = new System.Drawing.Point(400, 98);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(383, 76);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(81, 20);
-            this.btnAgregar.TabIndex = 30;
+            this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -81,7 +81,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 161);
+            this.label1.Location = new System.Drawing.Point(11, 125);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 20);
@@ -93,11 +93,11 @@
             // 
             this.bnVolver.BackColor = System.Drawing.Color.Red;
             this.bnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bnVolver.Location = new System.Drawing.Point(644, 342);
-            this.bnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bnVolver.Location = new System.Drawing.Point(907, 329);
+            this.bnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.bnVolver.Name = "bnVolver";
             this.bnVolver.Size = new System.Drawing.Size(66, 23);
-            this.bnVolver.TabIndex = 36;
+            this.bnVolver.TabIndex = 4;
             this.bnVolver.Text = "Volver";
             this.bnVolver.UseVisualStyleBackColor = false;
             this.bnVolver.Click += new System.EventHandler(this.bnVolver_Click);
@@ -106,14 +106,15 @@
             // 
             this.dgvMarca.AllowUserToAddRows = false;
             this.dgvMarca.AllowUserToDeleteRows = false;
+            this.dgvMarca.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarca.Location = new System.Drawing.Point(236, 161);
+            this.dgvMarca.Location = new System.Drawing.Point(206, 125);
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.RowHeadersWidth = 62;
             this.dgvMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarca.Size = new System.Drawing.Size(245, 204);
-            this.dgvMarca.TabIndex = 37;
+            this.dgvMarca.Size = new System.Drawing.Size(413, 227);
+            this.dgvMarca.TabIndex = 2;
             this.dgvMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarca_CellContentClick);
             this.dgvMarca.SelectionChanged += new System.EventHandler(this.dgvMarca_SelectionChanged);
             // 
@@ -121,7 +122,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(73, 98);
+            this.lblDescripcion.Location = new System.Drawing.Point(11, 74);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(159, 20);
@@ -130,19 +131,19 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(236, 98);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(206, 76);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.MaximumSize = new System.Drawing.Size(144, 30);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(144, 20);
-            this.txtDescripcion.TabIndex = 39;
+            this.txtDescripcion.TabIndex = 0;
             // 
             // frmListadoMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(984, 400);
             this.ControlBox = false;
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lblDescripcion);
@@ -152,7 +153,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btnAgregar);
-            this.MaximumSize = new System.Drawing.Size(999, 599);
+            this.MaximumSize = new System.Drawing.Size(1000, 439);
             this.Name = "frmListadoMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar";

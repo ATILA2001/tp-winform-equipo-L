@@ -1,4 +1,6 @@
-﻿using System;
+﻿using dominio;
+using negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,23 +14,13 @@ namespace TP_CatalogoComercio
 {
     public partial class frmPrincipal : Form
     {
+        private List<Articulo> listaArticulo;
         public frmPrincipal()
         {
             InitializeComponent();
         }
 
-        private void mostrarTodosLosArticulosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panelMain.Visible = false;
-            frmMostrarTodos frmMostrarTodos = new frmMostrarTodos();
-            frmMostrarTodos.FormClosed += (s, args) =>
-            {
-                panelMain.Visible = true;
-            };
-            frmMostrarTodos.MdiParent = this;
-            frmMostrarTodos.Show();
-
-        }
+        
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -41,30 +33,6 @@ namespace TP_CatalogoComercio
             frmAgregar.MdiParent = this;
             frmAgregar.Show();
         }
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panelMain.Visible = false;
-            frmSeleccionarModificar frmSeleccionar = new frmSeleccionarModificar();
-            frmSeleccionar.FormClosed += (s,args) =>
-            {
-                panelMain.Visible = true; 
-            };
-            frmSeleccionar.MdiParent = this;
-            frmSeleccionar.Show();
-        }
-
-        /*private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            panelMain.Visible = false;
-            frmEliminar frmEliminar = new frmEliminar();
-            frmEliminar.FormClosed += (s, args) =>
-            {
-                panelMain.Visible = true;
-            };
-            frmEliminar.MdiParent= this;
-            frmEliminar.Show();
-        }*/
 
         private void gestionArticulosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -126,6 +94,11 @@ namespace TP_CatalogoComercio
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaArticulo = negocio.listar();
+            dgvArticulos.DataSource = listaArticulo;
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["Imagen"].Visible = false;
 
         }
 
@@ -143,39 +116,38 @@ namespace TP_CatalogoComercio
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            panelMain.Visible = false;
-            frmSeleccionarModificar frmSeleccionar = new frmSeleccionarModificar();
-            frmSeleccionar.FormClosed += (s, args) =>
-            {
-                panelMain.Visible = true;
-            };
-            frmSeleccionar.MdiParent = this;
-            frmSeleccionar.Show();
+            Articulo artSeleccionado;
+            artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmModificar frmModificar = new frmModificar(artSeleccionado);
+            frmModificar.ShowDialog();
+            cargar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            panelMain.Visible = false;
-            frmEliminar frmEliminar = new frmEliminar();
-            frmEliminar.FormClosed += (s, args) =>
+            Articulo art = new Articulo();
+            Articulo seleccionado;
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            try
             {
-                panelMain.Visible = true;
-            };
-            frmEliminar.MdiParent = this;
-            frmEliminar.Show();
+                DialogResult respuesta = MessageBox.Show("Desea eliminar este artículo?", "Eliminando artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    articuloNegocio.eliminar(seleccionado.Id.ToString());
+                    MessageBox.Show("El articulo ha sido eliminado exitosamente");
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            //Close();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            panelMain.Visible = false;
-            frmMostrarTodos frmMostrarTodos = new frmMostrarTodos();
-            frmMostrarTodos.FormClosed += (s, args) =>
-            {
-                panelMain.Visible = true;
-            };
-            frmMostrarTodos.MdiParent = this;
-            frmMostrarTodos.Show();
-        }
+        
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
@@ -192,6 +164,51 @@ namespace TP_CatalogoComercio
             };
             frmFiltros.MdiParent = this;
             frmFiltros.Show();
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(artSeleccionado.Imagenes[0].Url);
+            dgvArticulos.Columns["Imagen"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArt.Load(imagen);
+
+            }
+            catch (Exception)
+            {
+                pbxArt.Load("https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg");
+            }
+
+        }
+        private void cargar()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                dgvArticulos.DataSource = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

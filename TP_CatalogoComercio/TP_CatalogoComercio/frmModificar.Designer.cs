@@ -54,9 +54,10 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(266, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(177, 20);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(264, 37);
+            this.lblTitulo.Size = new System.Drawing.Size(179, 26);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Modificar Artículo";
             // 
@@ -64,10 +65,11 @@
             // 
             this.btnCancelarArt.BackColor = System.Drawing.Color.Red;
             this.btnCancelarArt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarArt.Location = new System.Drawing.Point(480, 329);
+            this.btnCancelarArt.Location = new System.Drawing.Point(320, 214);
+            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarArt.Name = "btnCancelarArt";
-            this.btnCancelarArt.Size = new System.Drawing.Size(99, 35);
-            this.btnCancelarArt.TabIndex = 19;
+            this.btnCancelarArt.Size = new System.Drawing.Size(66, 23);
+            this.btnCancelarArt.TabIndex = 1;
             this.btnCancelarArt.Text = "Cancelar";
             this.btnCancelarArt.UseVisualStyleBackColor = false;
             this.btnCancelarArt.Click += new System.EventHandler(this.btnCancelarArt_Click);
@@ -76,10 +78,11 @@
             // 
             this.btnModificar.BackColor = System.Drawing.Color.Lime;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModificar.Location = new System.Drawing.Point(638, 329);
+            this.btnModificar.Location = new System.Drawing.Point(425, 214);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(94, 35);
-            this.btnModificar.TabIndex = 18;
+            this.btnModificar.Size = new System.Drawing.Size(63, 23);
+            this.btnModificar.TabIndex = 0;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -89,9 +92,11 @@
             this.gbOpcionalArt.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.gbOpcionalArt.Controls.Add(this.cbCategoriaArt);
             this.gbOpcionalArt.Controls.Add(this.cbMarcaArt);
-            this.gbOpcionalArt.Location = new System.Drawing.Point(458, 109);
+            this.gbOpcionalArt.Location = new System.Drawing.Point(305, 71);
+            this.gbOpcionalArt.Margin = new System.Windows.Forms.Padding(2);
             this.gbOpcionalArt.Name = "gbOpcionalArt";
-            this.gbOpcionalArt.Size = new System.Drawing.Size(292, 165);
+            this.gbOpcionalArt.Padding = new System.Windows.Forms.Padding(2);
+            this.gbOpcionalArt.Size = new System.Drawing.Size(195, 107);
             this.gbOpcionalArt.TabIndex = 17;
             this.gbOpcionalArt.TabStop = false;
             this.gbOpcionalArt.Text = "Opcional";
@@ -99,9 +104,10 @@
             // cbCategoriaArt
             // 
             this.cbCategoriaArt.FormattingEnabled = true;
-            this.cbCategoriaArt.Location = new System.Drawing.Point(86, 102);
+            this.cbCategoriaArt.Location = new System.Drawing.Point(57, 66);
+            this.cbCategoriaArt.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategoriaArt.Name = "cbCategoriaArt";
-            this.cbCategoriaArt.Size = new System.Drawing.Size(121, 28);
+            this.cbCategoriaArt.Size = new System.Drawing.Size(82, 21);
             this.cbCategoriaArt.TabIndex = 1;
             this.cbCategoriaArt.Text = "Categoria";
             this.cbCategoriaArt.SelectedIndexChanged += new System.EventHandler(this.cbCategoriaArt_SelectedIndexChanged);
@@ -109,9 +115,10 @@
             // cbMarcaArt
             // 
             this.cbMarcaArt.FormattingEnabled = true;
-            this.cbMarcaArt.Location = new System.Drawing.Point(86, 40);
+            this.cbMarcaArt.Location = new System.Drawing.Point(57, 26);
+            this.cbMarcaArt.Margin = new System.Windows.Forms.Padding(2);
             this.cbMarcaArt.Name = "cbMarcaArt";
-            this.cbMarcaArt.Size = new System.Drawing.Size(121, 28);
+            this.cbMarcaArt.Size = new System.Drawing.Size(82, 21);
             this.cbMarcaArt.TabIndex = 0;
             this.cbMarcaArt.Text = "Marca";
             this.cbMarcaArt.SelectedIndexChanged += new System.EventHandler(this.cbMarcaArt_SelectedIndexChanged);
@@ -129,112 +136,125 @@
             this.gbArt.Controls.Add(this.txtNombreArt);
             this.gbArt.Controls.Add(this.txtCodArt);
             this.gbArt.Controls.Add(this.lblCodArt);
-            this.gbArt.Location = new System.Drawing.Point(48, 109);
+            this.gbArt.Location = new System.Drawing.Point(32, 71);
+            this.gbArt.Margin = new System.Windows.Forms.Padding(2);
             this.gbArt.Name = "gbArt";
-            this.gbArt.Size = new System.Drawing.Size(356, 285);
+            this.gbArt.Padding = new System.Windows.Forms.Padding(2);
+            this.gbArt.Size = new System.Drawing.Size(237, 185);
             this.gbArt.TabIndex = 16;
             this.gbArt.TabStop = false;
             this.gbArt.Text = "Artículo";
             // 
             // nudPrecioArt
             // 
-            this.nudPrecioArt.Location = new System.Drawing.Point(123, 225);
+            this.nudPrecioArt.Location = new System.Drawing.Point(82, 146);
+            this.nudPrecioArt.Margin = new System.Windows.Forms.Padding(2);
             this.nudPrecioArt.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
             this.nudPrecioArt.Name = "nudPrecioArt";
-            this.nudPrecioArt.Size = new System.Drawing.Size(210, 26);
-            this.nudPrecioArt.TabIndex = 15;
+            this.nudPrecioArt.Size = new System.Drawing.Size(140, 20);
+            this.nudPrecioArt.TabIndex = 4;
             this.nudPrecioArt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblPrecioArt
             // 
             this.lblPrecioArt.AutoSize = true;
-            this.lblPrecioArt.Location = new System.Drawing.Point(58, 228);
+            this.lblPrecioArt.Location = new System.Drawing.Point(39, 148);
+            this.lblPrecioArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecioArt.Name = "lblPrecioArt";
-            this.lblPrecioArt.Size = new System.Drawing.Size(57, 20);
+            this.lblPrecioArt.Size = new System.Drawing.Size(40, 13);
             this.lblPrecioArt.TabIndex = 30;
             this.lblPrecioArt.Text = "Precio:";
             // 
             // lblImagenArt
             // 
             this.lblImagenArt.AutoSize = true;
-            this.lblImagenArt.Location = new System.Drawing.Point(48, 182);
+            this.lblImagenArt.Location = new System.Drawing.Point(32, 118);
+            this.lblImagenArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblImagenArt.Name = "lblImagenArt";
-            this.lblImagenArt.Size = new System.Drawing.Size(67, 20);
+            this.lblImagenArt.Size = new System.Drawing.Size(45, 13);
             this.lblImagenArt.TabIndex = 29;
             this.lblImagenArt.Text = "Imagen:";
             // 
             // lblDescripcionArt
             // 
             this.lblDescripcionArt.AutoSize = true;
-            this.lblDescripcionArt.Location = new System.Drawing.Point(21, 132);
+            this.lblDescripcionArt.Location = new System.Drawing.Point(14, 86);
+            this.lblDescripcionArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescripcionArt.Name = "lblDescripcionArt";
-            this.lblDescripcionArt.Size = new System.Drawing.Size(96, 20);
+            this.lblDescripcionArt.Size = new System.Drawing.Size(66, 13);
             this.lblDescripcionArt.TabIndex = 28;
             this.lblDescripcionArt.Text = "Descripción:";
             // 
             // lblNombreArt
             // 
             this.lblNombreArt.AutoSize = true;
-            this.lblNombreArt.Location = new System.Drawing.Point(48, 86);
+            this.lblNombreArt.Location = new System.Drawing.Point(32, 56);
+            this.lblNombreArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreArt.Name = "lblNombreArt";
-            this.lblNombreArt.Size = new System.Drawing.Size(69, 20);
+            this.lblNombreArt.Size = new System.Drawing.Size(47, 13);
             this.lblNombreArt.TabIndex = 27;
             this.lblNombreArt.Text = "Nombre:";
             // 
             // txtImagenArt
             // 
-            this.txtImagenArt.Location = new System.Drawing.Point(123, 178);
+            this.txtImagenArt.Location = new System.Drawing.Point(82, 116);
+            this.txtImagenArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtImagenArt.Name = "txtImagenArt";
-            this.txtImagenArt.Size = new System.Drawing.Size(210, 26);
-            this.txtImagenArt.TabIndex = 25;
+            this.txtImagenArt.Size = new System.Drawing.Size(141, 20);
+            this.txtImagenArt.TabIndex = 3;
             // 
             // txtDescripcionArt
             // 
-            this.txtDescripcionArt.Location = new System.Drawing.Point(123, 129);
+            this.txtDescripcionArt.Location = new System.Drawing.Point(82, 84);
+            this.txtDescripcionArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionArt.Name = "txtDescripcionArt";
-            this.txtDescripcionArt.Size = new System.Drawing.Size(210, 26);
-            this.txtDescripcionArt.TabIndex = 24;
+            this.txtDescripcionArt.Size = new System.Drawing.Size(141, 20);
+            this.txtDescripcionArt.TabIndex = 2;
             // 
             // txtNombreArt
             // 
-            this.txtNombreArt.Location = new System.Drawing.Point(123, 83);
+            this.txtNombreArt.Location = new System.Drawing.Point(82, 54);
+            this.txtNombreArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreArt.Name = "txtNombreArt";
-            this.txtNombreArt.Size = new System.Drawing.Size(210, 26);
-            this.txtNombreArt.TabIndex = 23;
+            this.txtNombreArt.Size = new System.Drawing.Size(141, 20);
+            this.txtNombreArt.TabIndex = 1;
             // 
             // txtCodArt
             // 
-            this.txtCodArt.Location = new System.Drawing.Point(123, 34);
+            this.txtCodArt.Location = new System.Drawing.Point(82, 22);
+            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodArt.Name = "txtCodArt";
-            this.txtCodArt.Size = new System.Drawing.Size(210, 26);
-            this.txtCodArt.TabIndex = 22;
+            this.txtCodArt.Size = new System.Drawing.Size(141, 20);
+            this.txtCodArt.TabIndex = 0;
             // 
             // lblCodArt
             // 
             this.lblCodArt.AutoSize = true;
-            this.lblCodArt.Location = new System.Drawing.Point(48, 40);
+            this.lblCodArt.Location = new System.Drawing.Point(32, 26);
+            this.lblCodArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodArt.Name = "lblCodArt";
-            this.lblCodArt.Size = new System.Drawing.Size(63, 20);
+            this.lblCodArt.Size = new System.Drawing.Size(43, 13);
             this.lblCodArt.TabIndex = 21;
             this.lblCodArt.Text = "Código:";
             // 
             // frmModificar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1467, 837);
+            this.ClientSize = new System.Drawing.Size(982, 400);
             this.ControlBox = false;
             this.Controls.Add(this.btnCancelarArt);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.gbOpcionalArt);
             this.Controls.Add(this.gbArt);
             this.Controls.Add(this.lblTitulo);
-            this.MaximumSize = new System.Drawing.Size(1489, 893);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(998, 594);
             this.Name = "frmModificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Articulos";

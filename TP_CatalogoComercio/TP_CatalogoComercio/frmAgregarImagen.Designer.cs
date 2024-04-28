@@ -67,7 +67,7 @@
             this.txtImagen.Margin = new System.Windows.Forms.Padding(2);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(144, 20);
-            this.txtImagen.TabIndex = 35;
+            this.txtImagen.TabIndex = 1;
             this.txtImagen.TextChanged += new System.EventHandler(this.txtImagenArt_TextChanged);
             this.txtImagen.Leave += new System.EventHandler(this.txtImagenArt_Leave);
             // 
@@ -77,7 +77,7 @@
             this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodArt.Name = "txtCodArt";
             this.txtCodArt.Size = new System.Drawing.Size(144, 20);
-            this.txtCodArt.TabIndex = 34;
+            this.txtCodArt.TabIndex = 0;
             this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
             // 
             // lblCodArt
@@ -98,7 +98,7 @@
             this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarArt.Name = "btnCancelarArt";
             this.btnCancelarArt.Size = new System.Drawing.Size(66, 23);
-            this.btnCancelarArt.TabIndex = 32;
+            this.btnCancelarArt.TabIndex = 3;
             this.btnCancelarArt.Text = "Cancelar";
             this.btnCancelarArt.UseVisualStyleBackColor = false;
             this.btnCancelarArt.Click += new System.EventHandler(this.btnCancelarArt_Click);
@@ -111,7 +111,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(66, 23);
-            this.btnAgregar.TabIndex = 31;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
