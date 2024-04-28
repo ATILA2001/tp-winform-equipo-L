@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -65,6 +67,11 @@ namespace TP_CatalogoComercio
             nudHasta .Value = 0;
             cbCategoriaArt .SelectedIndex = 0;
             cbMarcaArt .SelectedIndex = 0;
+        }
+
+        private void dvgArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

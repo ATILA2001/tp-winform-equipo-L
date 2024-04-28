@@ -6,9 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace TP_CatalogoComercio
+namespace dominio
 {
-    internal class Articulo
+        public class Articulo
     {
         private int id;
         private string codArticulo;
@@ -17,7 +17,11 @@ namespace TP_CatalogoComercio
         private Imagen imagen;
         private decimal precio;
 
+<<<<<<< HEAD:TP_CatalogoComercio/TP_CatalogoComercio/Articulo.cs
         public int Id { get; set; }
+=======
+        public int Id { get { return id;} }
+>>>>>>> 991dcb0cfad13e7540e981996e211a0d473d89c2:TP_CatalogoComercio/dominio/Articulo.cs
         public string CodigoArticulo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }

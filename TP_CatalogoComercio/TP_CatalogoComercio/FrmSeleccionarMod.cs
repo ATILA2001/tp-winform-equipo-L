@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -47,6 +49,16 @@ namespace TP_CatalogoComercio
             listaArticulo = negocio.listar();
             dgvArticulos.DataSource = listaArticulo;
             dgvArticulos.Columns["Imagen"].Visible = false;
+        }
+
+        private void txtCodArt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -45,6 +45,30 @@
             this.lblTitulo.TabIndex = 23;
             this.lblTitulo.Text = "Seleccione un Artículo";
             // 
+<<<<<<< HEAD
+=======
+            // txtCodArt
+            // 
+            this.txtCodArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodArt.Location = new System.Drawing.Point(373, 356);
+            this.txtCodArt.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodArt.Name = "txtCodArt";
+            this.txtCodArt.Size = new System.Drawing.Size(141, 23);
+            this.txtCodArt.TabIndex = 27;
+            this.txtCodArt.TextChanged += new System.EventHandler(this.txtCodArt_TextChanged);
+            // 
+            // lblCodArt
+            // 
+            this.lblCodArt.AutoSize = true;
+            this.lblCodArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodArt.Location = new System.Drawing.Point(307, 356);
+            this.lblCodArt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodArt.Name = "lblCodArt";
+            this.lblCodArt.Size = new System.Drawing.Size(63, 17);
+            this.lblCodArt.TabIndex = 26;
+            this.lblCodArt.Text = "Código:";
+            // 
+>>>>>>> 991dcb0cfad13e7540e981996e211a0d473d89c2
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Red;
@@ -85,6 +109,7 @@
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(998, 377);
             this.dgvArticulos.TabIndex = 28;
+            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // frmSeleccionarModificar
             // 

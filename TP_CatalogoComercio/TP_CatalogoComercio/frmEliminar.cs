@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -19,7 +21,13 @@ namespace TP_CatalogoComercio
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            Articulo art = new Articulo();
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+            string codeToDelete = txtCodArt.Text.Trim();
+            string id = articuloNegocio.searchId(codeToDelete);
+            articuloNegocio.eliminar(id);
             MessageBox.Show("El articulo ha sido eliminado exitosamente");
+            limpiarControles();
             Close();
         }
 
@@ -36,6 +44,19 @@ namespace TP_CatalogoComercio
         private void txtCodArt_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private void limpiarControles()
+        {
+            MarcaNegocio marca = new MarcaNegocio();
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            try
+            {
+                txtCodArt.Text = string.Empty;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.ToString());
+            }
         }
     }
 }

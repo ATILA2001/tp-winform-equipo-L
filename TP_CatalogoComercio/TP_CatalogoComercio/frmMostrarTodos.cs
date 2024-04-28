@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using negocio;
 
 namespace TP_CatalogoComercio
 {
@@ -44,7 +46,8 @@ namespace TP_CatalogoComercio
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulo = negocio.listar();
-            dgvArticulos.DataSource = listaArticulo;
+            dgvArticulos.DataSource = listaArticulo;           
+            dgvArticulos.Columns["Id"].Visible = false;
             pbxArt.Load(listaArticulo[0].Imagenes[0].Url);
     
         }
@@ -56,11 +59,17 @@ namespace TP_CatalogoComercio
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            /*Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(artSeleccionado.Imagenes[0].Url);
+<<<<<<< HEAD
             dgvArticulos.Columns["Imagen"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
         }
+=======
+        */
+
+            }
+>>>>>>> 991dcb0cfad13e7540e981996e211a0d473d89c2
         private void cargarImagen(string imagen)
         {
             try
