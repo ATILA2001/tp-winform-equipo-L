@@ -18,14 +18,19 @@ namespace negocio
             try
             {
 
-                datos.setearConsulta("select ImagenUrl from IMAGENES");
+                datos.setearConsulta("select I.ImagenUrl as Url ,I.IdArticulo as Imagen, A.Nombre as ARTICULOS from IMAGENES I inner join ARTICULOS A ON I.IdArticulo = A.Id");
                 datos.ejecutarLectura();
+
+                
 
                 while (datos.Lector.Read())
                 {
-                    Imagen aux = new Imagen();
-                    aux.Url = (string)datos.Lector["ImagenUrl"];
-                    lista.Add(aux);
+                    Imagen imagen = new Imagen();
+                    imagen.Url = (string)datos.Lector["Url"];
+                    imagen.Id = (int)datos.Lector["Imagen"];
+                    imagen.NombreArticulo = (string)datos.Lector["ARTICULOS"];
+                    
+                    lista.Add(imagen);
                 }
                 return lista;
             }

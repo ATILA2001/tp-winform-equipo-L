@@ -16,7 +16,7 @@ namespace TP_CatalogoComercio
 {
     public partial class frmAgregarImagen : Form
     {
-        //private List<Imagen> listaImagen;
+        private List<Imagen> listaImagen;
         public frmAgregarImagen()
         {
             InitializeComponent();
@@ -29,6 +29,7 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            /*
             Imagen imagen= new Imagen();
             ImagenNegocio imagenNegocio = new ImagenNegocio();
             ArticuloNegocio negocio= new ArticuloNegocio();
@@ -64,7 +65,7 @@ namespace TP_CatalogoComercio
             {
 
                 throw;
-            }
+            }*/
             
         }
 
@@ -75,7 +76,11 @@ namespace TP_CatalogoComercio
 
         private void frmAgregarImagen_Load(object sender, EventArgs e)
         {
-            
+            ImagenNegocio imagen = new ImagenNegocio();
+            listaImagen = imagen.listar();
+            dgvImagenes.DataSource = listaImagen;
+            dgvImagenes.Columns["Id"].Visible = false;
+            dgvImagenes.Columns["Url"].Visible = false;
         }
 
         private void txtImagenArt_TextChanged(object sender, EventArgs e)
@@ -85,7 +90,7 @@ namespace TP_CatalogoComercio
 
         private void txtImagenArt_Leave(object sender, EventArgs e)
         {
-            cargarImagen(txtImagen.Text);
+            //cargarImagen(txtImagen.Text);
         }
 
         private void pbxImagen_Click(object sender, EventArgs e)
@@ -98,11 +103,11 @@ namespace TP_CatalogoComercio
         {
             try
             {
-                pbxImagen.Load(imagen);
+                pbxImg.Load(imagen);
             }
             catch (Exception)
             {
-                pbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+                pbxImg.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
         }
 
@@ -110,5 +115,23 @@ namespace TP_CatalogoComercio
         {
 
         }
+
+        private void dgvImagenes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvImagenes_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+            Imagen imgSeleccionado = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+            cargarImagen(imgSeleccionado.Url);
+            dgvImagenes.Columns["Url"].Visible = false;
+            dgvImagenes.Columns["Id"].Visible = false;
+        }
+        
+            
+            }
     }
-}
+

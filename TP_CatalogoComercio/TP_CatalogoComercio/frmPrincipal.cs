@@ -187,5 +187,20 @@ namespace TP_CatalogoComercio
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void pbxArt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
