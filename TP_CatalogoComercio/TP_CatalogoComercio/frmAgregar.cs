@@ -53,7 +53,8 @@ namespace TP_CatalogoComercio
             {
 
                 throw;
-            }
+            }            
+            Close();
         }
 
         private void limpiarControles()
@@ -91,5 +92,6 @@ namespace TP_CatalogoComercio
                 MessageBox.Show(Ex.ToString());
             }
         }
+        
     }
 }

@@ -53,7 +53,6 @@ namespace TP_CatalogoComercio
                     marca.Descripcion = txtDescripcion.Text.Trim();
                     marcaNegocio.agregar(marca);
                     MessageBox.Show("¡Se agregó el registro!");
-                    Close();
                 }
                 else
                 {
@@ -65,10 +64,8 @@ namespace TP_CatalogoComercio
 
                 throw;
             }
+            cargar();
         }
-
-        //private DataGridViewRow filaSeleccionada;
-
 
         private void dgvMarca_SelectionChanged(object sender, EventArgs e)
         {
@@ -78,10 +75,14 @@ namespace TP_CatalogoComercio
         private void btEliminar_Click(object sender, EventArgs e)
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
-            marcaNegocio.eliminar(marcaSeleccionada.Id);
-            MessageBox.Show("¡Se elimino correctamente el registro!");
-            Close();
-            
+            DialogResult respuesta = MessageBox.Show("Desea eliminar esta marca?", "Eliminando marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+                marcaSeleccionada = (Marca)dgvMarca.CurrentRow.DataBoundItem;
+                marcaNegocio.eliminar(marcaSeleccionada.Id);
+                MessageBox.Show("El articulo ha sido eliminado exitosamente");
+                cargar();
+            }            
         }
 
             private void frmListadoMarcas_Load(object sender, EventArgs e)
@@ -94,6 +95,18 @@ namespace TP_CatalogoComercio
         private void dgvMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+        private void cargar()
+        {
+            MarcaNegocio negocio = new MarcaNegocio();
+            try
+            {
+                dgvMarca.DataSource = negocio.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

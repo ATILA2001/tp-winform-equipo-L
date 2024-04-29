@@ -42,7 +42,6 @@ namespace TP_CatalogoComercio
                     categoria.Descripcion = txtDescripcion.Text.Trim();
                     categoriaNegocio.agregar(categoria);
                     MessageBox.Show("¡Se agregó el registro!");
-                    Close();
                 }
                 else
                 {
@@ -54,6 +53,7 @@ namespace TP_CatalogoComercio
 
                 throw ex;
             }
+            cargar();
         }
 
 
@@ -73,10 +73,14 @@ namespace TP_CatalogoComercio
         private void btEliminar_Click(object sender, EventArgs e)
         {
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-            categoriaNegocio.eliminar(categoriaSeleccionada.Id);
-            MessageBox.Show("¡Se elimino correctamente el registro!");
-            Close();
-
+            DialogResult respuesta = MessageBox.Show("Desea eliminar esta marca?", "Eliminando marca", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (respuesta == DialogResult.Yes)
+            {
+                categoriaSeleccionada = (Categoria)dgvCategoria.CurrentRow.DataBoundItem;
+                categoriaNegocio.eliminar(categoriaSeleccionada.Id);
+                MessageBox.Show("El articulo ha sido eliminado exitosamente");
+                cargar();
+            }
         }
 
         private void dgvCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,6 +96,18 @@ namespace TP_CatalogoComercio
         private void dgvCategoria_SelectionChanged(object sender, EventArgs e)
         {
             categoriaSeleccionada = (Categoria)dgvCategoria.CurrentRow.DataBoundItem;
+        }
+        private void cargar()
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            try
+            {
+                dgvCategoria.DataSource = categoriaNegocio.listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

@@ -104,14 +104,20 @@ namespace TP_CatalogoComercio
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            panelMain.Visible = false;
-            frmAgregar frmAgregar = new frmAgregar();
-            frmAgregar.FormClosed += (s, args) =>
-            {
-                panelMain.Visible = true;
-            };
-            frmAgregar.MdiParent = this;
-            frmAgregar.Show();
+            //panelMain.Visible = false;
+            //frmAgregar frmAgregar = new frmAgregar();
+            //frmAgregar.FormClosed += (s, args) =>
+            //{
+            //    panelMain.Visible = true;
+            //};
+            //frmAgregar.MdiParent = this;
+            //frmAgregar.Show();
+            //cargar();
+            Articulo artSeleccionado;
+            artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            frmAgregar ventanaAgregar = new frmAgregar();
+            ventanaAgregar.ShowDialog();
+            cargar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

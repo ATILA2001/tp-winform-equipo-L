@@ -106,6 +106,7 @@
             // 
             this.dgvMarca.AllowUserToAddRows = false;
             this.dgvMarca.AllowUserToDeleteRows = false;
+            this.dgvMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMarca.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarca.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;

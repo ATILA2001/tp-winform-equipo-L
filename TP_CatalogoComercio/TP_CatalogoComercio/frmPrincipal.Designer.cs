@@ -34,6 +34,7 @@
             this.listadoMarcasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.pbxArt = new System.Windows.Forms.PictureBox();
@@ -42,7 +43,6 @@
             this.btnFiltros = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArt)).BeginInit();
@@ -68,34 +68,35 @@
             this.listadoMarcasToolStripMenuItem,
             this.listadoCategoriasToolStripMenuItem});
             this.imagenesToolStripMenuItem.Name = "imagenesToolStripMenuItem";
-            this.imagenesToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
+            this.imagenesToolStripMenuItem.Size = new System.Drawing.Size(49, 22);
             this.imagenesToolStripMenuItem.Text = "Editar";
             this.imagenesToolStripMenuItem.Click += new System.EventHandler(this.imagenesToolStripMenuItem_Click);
             // 
             // cargarImagenToolStripMenuItem
             // 
             this.cargarImagenToolStripMenuItem.Name = "cargarImagenToolStripMenuItem";
-            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.cargarImagenToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.cargarImagenToolStripMenuItem.Text = "Cargar imagen";
             this.cargarImagenToolStripMenuItem.Click += new System.EventHandler(this.cargarImagenToolStripMenuItem_Click);
             // 
             // listadoMarcasToolStripMenuItem
             // 
             this.listadoMarcasToolStripMenuItem.Name = "listadoMarcasToolStripMenuItem";
-            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.listadoMarcasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.listadoMarcasToolStripMenuItem.Text = "Listado marcas";
             this.listadoMarcasToolStripMenuItem.Click += new System.EventHandler(this.listadoMarcasToolStripMenuItem_Click);
             // 
             // listadoCategoriasToolStripMenuItem
             // 
             this.listadoCategoriasToolStripMenuItem.Name = "listadoCategoriasToolStripMenuItem";
-            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.listadoCategoriasToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.listadoCategoriasToolStripMenuItem.Text = "Listado categorias";
             this.listadoCategoriasToolStripMenuItem.Click += new System.EventHandler(this.listadoCategoriasToolStripMenuItem_Click);
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panelMain.Controls.Add(this.btnAgregar);
             this.panelMain.Controls.Add(this.lblTitulo);
             this.panelMain.Controls.Add(this.btnSiguiente);
             this.panelMain.Controls.Add(this.btnAnterior);
@@ -104,12 +105,21 @@
             this.panelMain.Controls.Add(this.btnEliminar);
             this.panelMain.Controls.Add(this.btnFiltros);
             this.panelMain.Controls.Add(this.btnModificar);
-            this.panelMain.Controls.Add(this.btnAgregar);
             this.panelMain.Location = new System.Drawing.Point(0, 27);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(984, 377);
             this.panelMain.TabIndex = 2;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(213, 13);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(226, 42);
+            this.lblTitulo.TabIndex = 24;
+            this.lblTitulo.Text = "CATALOGO";
             // 
             // btnSiguiente
             // 
@@ -144,6 +154,7 @@
             // 
             this.dgvArticulos.AllowUserToAddRows = false;
             this.dgvArticulos.AllowUserToDeleteRows = false;
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -198,16 +209,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(213, 13);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(226, 42);
-            this.lblTitulo.TabIndex = 24;
-            this.lblTitulo.Text = "CATALOGO";
             // 
             // frmPrincipal
             // 
