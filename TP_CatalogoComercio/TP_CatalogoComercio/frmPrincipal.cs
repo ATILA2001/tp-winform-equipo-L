@@ -20,8 +20,6 @@ namespace TP_CatalogoComercio
             InitializeComponent();
         }
 
-        
-
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             panelMain.Visible = false;
@@ -32,16 +30,6 @@ namespace TP_CatalogoComercio
             };
             frmAgregar.MdiParent = this;
             frmAgregar.Show();
-        }
-
-        private void gestionArticulosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void imagenesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void cargarImagenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,7 +87,6 @@ namespace TP_CatalogoComercio
             dgvArticulos.DataSource = listaArticulo;
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["Imagen"].Visible = false;
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -136,7 +123,7 @@ namespace TP_CatalogoComercio
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                DialogResult respuesta = MessageBox.Show("Desea eliminar este artículo?", "Eliminando artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar este artículo?", "Eliminando artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
@@ -153,12 +140,6 @@ namespace TP_CatalogoComercio
             //Close();
         }
 
-        
-
-        private void panelMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnFiltros_Click(object sender, EventArgs e)
         {
@@ -170,11 +151,6 @@ namespace TP_CatalogoComercio
             };
             frmFiltros.MdiParent = this;
             frmFiltros.Show();
-        }
-
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
@@ -210,11 +186,6 @@ namespace TP_CatalogoComercio
 
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
