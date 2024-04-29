@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnCancelarArt = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pbxImg = new System.Windows.Forms.PictureBox();
             this.dgvImagenes = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImagenes)).BeginInit();
             this.SuspendLayout();
@@ -51,18 +51,18 @@
             this.lblTitulo.Text = "Gestion de Imagenes";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // btnCancelarArt
+            // btnVolver
             // 
-            this.btnCancelarArt.BackColor = System.Drawing.Color.Red;
-            this.btnCancelarArt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelarArt.Location = new System.Drawing.Point(25, 338);
-            this.btnCancelarArt.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelarArt.Name = "btnCancelarArt";
-            this.btnCancelarArt.Size = new System.Drawing.Size(66, 23);
-            this.btnCancelarArt.TabIndex = 3;
-            this.btnCancelarArt.Text = "Cancelar";
-            this.btnCancelarArt.UseVisualStyleBackColor = false;
-            this.btnCancelarArt.Click += new System.EventHandler(this.btnCancelarArt_Click);
+            this.btnVolver.BackColor = System.Drawing.Color.Red;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Location = new System.Drawing.Point(25, 338);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(66, 23);
+            this.btnVolver.TabIndex = 3;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnCancelarArt_Click);
             // 
             // btnAgregar
             // 
@@ -99,29 +99,29 @@
             this.dgvImagenes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImagenes_CellContentClick);
             this.dgvImagenes.SelectionChanged += new System.EventHandler(this.dgvImagenes_SelectionChanged);
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(95, 338);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(66, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Location = new System.Drawing.Point(95, 338);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(66, 23);
+            this.btnEliminar.TabIndex = 39;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnModificar
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(165, 338);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 23);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnModificar.BackColor = System.Drawing.Color.Red;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnModificar.Location = new System.Drawing.Point(165, 338);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(66, 23);
+            this.btnModificar.TabIndex = 40;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
             // 
             // frmAgregarImagen
             // 
@@ -130,12 +130,12 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 396);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvImagenes);
             this.Controls.Add(this.pbxImg);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnCancelarArt);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnAgregar);
             this.Name = "frmAgregarImagen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -152,11 +152,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnCancelarArt;
+        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pbxImg;
         private System.Windows.Forms.DataGridView dgvImagenes;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
