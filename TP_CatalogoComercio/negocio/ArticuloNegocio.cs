@@ -112,12 +112,6 @@ namespace negocio
                 datos.setearParametros("@idCategoria", art.Categoria.Id);
                 datos.setearParametros("@idPrecio", art.Precio);
                 datos.ejecutarAccion();
-
-                /*datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) " +
-                    "VALUES( @id,@imagenUrl");
-                datos.setearParametros("@id", art.Id);
-                datos.setearParametros("@imagenUrl", art.Imagenes.
-                */
             }
             catch (Exception Ex)
             {
@@ -129,6 +123,46 @@ namespace negocio
                 datos.cerrarConexion(); 
             }
         }
+
+        public void MaxId(Articulo art) 
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT MAX(Id) AS Id FROM ARTICULOS");
+                datos.ejecutarLectura();
+
+                while (datos.Lector.Read())
+                {
+                    art.Id = (int)datos.Lector["Id"];
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { datos.cerrarConexion();}
+        }
+
+        public void agregarImagen(Articulo art)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) VALUES(@IdArticulo, @ImagenUrl)");
+                datos.setearParametros("@IdArticulo", art.Id);
+                datos.setearParametros("@ImagenUrl", art.Imagen.Url);
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally { datos.cerrarConexion();}
+        }
+
         public void eliminar(string id)
         {
             AccesoDatos datos = new AccesoDatos();

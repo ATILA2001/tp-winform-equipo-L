@@ -46,9 +46,11 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelarArt = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.pbxArt = new System.Windows.Forms.PictureBox();
             this.gbArt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioArt)).BeginInit();
             this.gbOpcionalArt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArt)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -136,6 +138,7 @@
             this.txtImagenArt.Name = "txtImagenArt";
             this.txtImagenArt.Size = new System.Drawing.Size(210, 26);
             this.txtImagenArt.TabIndex = 3;
+            this.txtImagenArt.Leave += new System.EventHandler(this.txtImagenArt_Leave);
             // 
             // txtDescripcionArt
             // 
@@ -224,12 +227,21 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(861, 85);
+            this.listView1.Location = new System.Drawing.Point(30, 434);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(340, 372);
+            this.listView1.Size = new System.Drawing.Size(91, 68);
             this.listView1.TabIndex = 15;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // pbxArt
+            // 
+            this.pbxArt.Location = new System.Drawing.Point(812, 85);
+            this.pbxArt.Name = "pbxArt";
+            this.pbxArt.Size = new System.Drawing.Size(306, 285);
+            this.pbxArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArt.TabIndex = 17;
+            this.pbxArt.TabStop = false;
             // 
             // frmAgregar
             // 
@@ -238,6 +250,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1464, 615);
             this.ControlBox = false;
+            this.Controls.Add(this.pbxArt);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnCancelarArt);
             this.Controls.Add(this.btnAgregar);
@@ -254,6 +267,7 @@
             this.gbArt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioArt)).EndInit();
             this.gbOpcionalArt.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +293,6 @@
         private System.Windows.Forms.Button btnCancelarArt;
         private System.Windows.Forms.NumericUpDown nudPrecioArt;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.PictureBox pbxArt;
     }
 }

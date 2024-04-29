@@ -27,24 +27,27 @@ namespace TP_CatalogoComercio
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Articulo art = new Articulo();
-            Imagen img = new Imagen();
+            art.Imagen = new Imagen();
             ArticuloNegocio artNegocio = new ArticuloNegocio();
             try
             {
-                if(txtCodArt.Text.Trim().Length > 0 && txtNombreArt.Text.Trim() != string.Empty && txtDescripcionArt.Text.Trim() != string.Empty && nudPrecioArt.Value != 0)
+                if (txtCodArt.Text.Trim().Length > 0 && txtNombreArt.Text.Trim() != string.Empty && txtDescripcionArt.Text.Trim() != string.Empty && nudPrecioArt.Value != 0)
                 {
                     art.CodigoArticulo = txtCodArt.Text.Trim();
                     art.Nombre = txtNombreArt.Text.Trim();
                     art.Descripcion = txtDescripcionArt.Text.Trim();
                     art.Marca = (Marca)cbMarcaArt.SelectedItem;
                     art.Categoria = (Categoria)cbCategoriaArt.SelectedItem;
-                    img.Url = txtImagenArt.Text.Trim();
+                    art.Imagen.Url = txtImagenArt.Text.Trim();
                     art.Precio = nudPrecioArt.Value;
 
                     artNegocio.agregar(art);
+                    artNegocio.MaxId(art);
+                    artNegocio.agregarImagen(art);
                     MessageBox.Show("¡Se agregó el registro!");
                     limpiarControles();
-                }else
+                }
+                else
                 {
                     MessageBox.Show("¡Tiene que llenar los campos!");
                 }
@@ -92,6 +95,25 @@ namespace TP_CatalogoComercio
                 MessageBox.Show(Ex.ToString());
             }
         }
-        
+
+        private void txtImagenArt_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagenArt.Text);
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArt.Load(imagen);
+
+            }
+            catch (Exception)
+            {
+                pbxArt.Load("https://img.freepik.com/vector-gratis/ilustracion-icono-galeria_53876-27002.jpg");
+            }
+
+        }
     }
 }
